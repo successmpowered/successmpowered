@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Start a Conversation | Success Empowered</title>
+<meta name="description" content="A first conversation is 30 minutes, confidential, and with a partner. If you're exploring leadership or culture work, let's talk.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<style>
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: 80px;
+    align-items: flex-start;
+  }
+  .contact-side h3 { font-size: 20px; margin-top: 36px; margin-bottom: 12px; }
+  .contact-side p, .contact-side a { font-size: 15.5px; }
+  .contact-side .detail { color: var(--muted); margin-bottom: 8px; }
+  .contact-side strong { color: var(--navy); }
+  .form-success {
+    display: none;
+    background: var(--ivory);
+    border: 1px solid var(--clay);
+    border-radius: 6px;
+    padding: 32px;
+    margin-top: 20px;
+  }
+  .form-success h3 { margin-top: 0; }
+  @media (max-width: 960px) { .contact-layout { grid-template-columns: 1fr; gap: 40px; } }
+
+  .soft-cta-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
+  .soft-cta {
+    padding: 28px 26px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--white);
+    transition: border-color 0.2s, transform 0.2s;
+    text-decoration: none;
+    color: inherit;
+  }
+  .soft-cta:hover { border-color: var(--clay); transform: translateY(-2px); color: inherit; }
+  .soft-cta h4 { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 500; text-transform: none; letter-spacing: 0; color: var(--navy); margin: 0 0 8px 0; }
+  .soft-cta p { font-size: 14px; color: var(--muted); margin: 0 0 12px 0; }
+  .soft-cta span { color: var(--clay); font-size: 13.5px; font-weight: 600; }
+  @media (max-width: 960px) { .soft-cta-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="logo">Success Empowered<span class="dot">.</span></a>
+    <nav><ul class="nav-links">
+      <li><a href="leadership-development.html">Leadership</a></li>
+      <li><a href="culture-transformation.html">Culture</a></li>
+      <li><a href="executive-coaching.html">Coaching</a></li>
+      <li><a href="approach.html">Approach</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="insights.html">Insights</a></li>
+      <li><a href="contact.html" class="btn">Start a conversation <span class="arrow">→</span></a></li>
+    </ul></nav>
+    <button class="nav-burger" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Start a Conversation</span>
+    <h1>Let's start with <em style="color:var(--clay);">a conversation.</em></h1>
+    <p class="lede">A first conversation is 30 minutes, confidential, and with a partner — not a sales team. We'll listen to what you're navigating, share an honest view on whether we're the right fit, and either way leave you with something useful.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-layout">
+      <aside class="contact-side">
+        <span class="eyebrow">What to expect</span>
+        <h3>Response within two working days.</h3>
+        <p class="detail">One of the partners will read your message personally and come back to you directly. If what you're navigating is time-sensitive, say so in the message and we'll move faster.</p>
+
+        <h3>The first call</h3>
+        <p class="detail">30 minutes, video or phone. Relaxed, exploratory, and free of obligation. We'll ask questions, listen, and share an honest view on whether this is the kind of work we can help with.</p>
+
+        <h3>Confidentiality</h3>
+        <p class="detail">Everything you share is held in confidence. Nothing is shared outside of Success Empowered without your explicit agreement.</p>
+
+        <h3>Direct contact</h3>
+        <p class="detail"><strong>Email:</strong> <a href="mailto:team@successempowered.com">team@successempowered.com</a></p>
+        <p class="detail"><strong>UK:</strong> <a href="tel:+447709532849">+44 7709 532849</a></p>
+        <p class="detail"><strong>India:</strong> <a href="tel:+919619102556">+91 9619 102556</a></p>
+        <p class="detail"><strong>LinkedIn:</strong> <a href="#">@successempowered</a></p>
+      </aside>
+
+      <div>
+        <form class="form" data-intake>
+          <div class="form-body">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Your name</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-field">
+                <label for="role">Your role</label>
+                <input type="text" id="role" name="role" placeholder="e.g. CEO, Head of HR, Chief of Staff" required>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="org">Organisation</label>
+              <input type="text" id="org" name="org" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="size">Organisation size</label>
+                <select id="size" name="size" required>
+                  <option value="">Select —</option>
+                  <option>Under 50</option>
+                  <option>50–250</option>
+                  <option>250–1,000</option>
+                  <option>1,000–5,000</option>
+                  <option>5,000+</option>
+                  <option>I'm enquiring as an individual</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="region">Country / region</label>
+                <input type="text" id="region" name="region" placeholder="e.g. United Kingdom, India" required>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="message">What's on your mind?</label>
+              <textarea id="message" name="message" placeholder="A few lines is fine. What's the situation, challenge, or opportunity you'd like to talk about?" required></textarea>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="when">When would you like to talk?</label>
+                <select id="when" name="when">
+                  <option value="">Select —</option>
+                  <option>This week</option>
+                  <option>Next 2 weeks</option>
+                  <option>Within the month</option>
+                  <option>Exploring, no rush</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="source">How did you hear about us? <span style="color:var(--muted); font-weight:400;">(optional)</span></label>
+                <select id="source" name="source">
+                  <option value="">Select —</option>
+                  <option>Referral</option>
+                  <option>LinkedIn</option>
+                  <option>Search</option>
+                  <option>Existing client</option>
+                  <option>Event</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" class="btn" style="margin-top:8px;">Send <span class="arrow">→</span></button>
+            <p class="form-note" style="margin-top:16px;">By submitting this form you agree to Success Empowered contacting you about your enquiry. We never share your details.</p>
+          </div>
+
+          <div class="form-success">
+            <h3>Thank you.</h3>
+            <p>One of the partners will read your message personally and come back to you within two working days.</p>
+            <p style="margin-bottom:0;">If your situation is time-sensitive, email <a href="mailto:team@successempowered.com">team@successempowered.com</a> directly.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head" style="max-width:600px;">
+      <span class="eyebrow">Or — if a conversation isn't right yet</span>
+      <h2>Three lower-commitment ways to stay close.</h2>
+    </div>
+
+    <div class="soft-cta-grid">
+      <a href="insights.html" class="soft-cta">
+        <h4>Read our writing</h4>
+        <p>Long-form thinking on leadership, culture, and modern work.</p>
+        <span>Explore Insights →</span>
+      </a>
+      <a href="insights.html#newsletter" class="soft-cta">
+        <h4>Subscribe to our newsletter</h4>
+        <p>One considered email a month. No promotions, no clickbait.</p>
+        <span>Subscribe →</span>
+      </a>
+      <a href="about.html" class="soft-cta">
+        <h4>Learn about us</h4>
+        <p>How the firm is structured, what we believe, and where we work.</p>
+        <span>About Success Empowered →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><h3>Success Empowered</h3><p>A leadership and culture consultancy helping organisations develop the human capacity they need to lead what's next.</p></div>
+      <div><h4>What we do</h4><ul><li><a href="leadership-development.html">Leadership Development</a></li><li><a href="culture-transformation.html">Culture Transformation</a></li><li><a href="executive-coaching.html">Executive Coaching</a></li><li><a href="team-interventions.html">Team Interventions</a></li></ul></div>
+      <div><h4>About</h4><ul><li><a href="about.html">Our Story</a></li><li><a href="team.html">Team &amp; Associates</a></li><li><a href="approach.html">Our Approach</a></li><li><a href="insights.html">Insights</a></li></ul></div>
+      <div><h4>Client work</h4><ul><li><a href="#">Case Studies</a></li><li><a href="#">Client Outcomes</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="contact.html">Start a conversation</a></li><li><a href="mailto:team@successempowered.com">team@successempowered.com</a></li><li><a href="tel:+447709532849">+44 7709 532849</a></li><li><a href="tel:+919619102556">+91 9619 102556</a></li></ul></div>
+    </div>
+    <div class="footer-accred"><div class="accred-logos"><span>ICF Accredited</span><span>EMCC Member</span><span>CIPD</span></div><div class="footer-legal"><span>© Success Empowered 2026</span><a href="#">Privacy</a><a href="#">Terms</a><a href="strategy.html">Strategy pack</a></div></div>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

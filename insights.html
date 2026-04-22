@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insights | Leadership, Culture &amp; Modern Work | Success Empowered</title>
+<meta name="description" content="Writing, research, and thinking on leadership, culture, and the human work of modern organisations. Practical notes from our work with leaders and teams.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<style>
+  .article-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .article {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+  .article:hover { border-color: var(--clay); box-shadow: 0 12px 32px rgba(14,30,63,0.08); transform: translateY(-2px); color: inherit; }
+  .article-visual {
+    height: 180px;
+    background: linear-gradient(135deg, var(--indigo) 0%, var(--navy) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .article-visual::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 30% 50%, rgba(201,106,63,0.25), transparent 60%); }
+  .article-visual.v2 { background: linear-gradient(135deg, var(--clay) 0%, #8A3B1A 100%); }
+  .article-visual.v2::before { background: radial-gradient(circle at 70% 40%, rgba(42,37,96,0.3), transparent 60%); }
+  .article-visual.v3 { background: linear-gradient(135deg, #3D3470 0%, var(--navy) 100%); }
+  .article-visual.v4 { background: linear-gradient(135deg, var(--navy) 0%, #1A1538 100%); }
+  .article-visual.v4::before { background: radial-gradient(circle at 20% 80%, rgba(201,106,63,0.3), transparent 60%); }
+  .article-visual.v5 { background: linear-gradient(135deg, #734030 0%, var(--clay) 100%); }
+  .article-visual.v6 { background: linear-gradient(135deg, var(--indigo) 0%, #3D3470 100%); }
+  .article-body { padding: 24px 26px 28px 26px; }
+  .article-topic { display: inline-block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--clay); margin-bottom: 12px; }
+  .article-title { font-family: 'Fraunces', serif; font-size: 20px; line-height: 1.25; color: var(--navy); margin: 0 0 10px 0; font-weight: 500; }
+  .article-meta { font-size: 13px; color: var(--muted); }
+
+  .topics { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
+  .topic-pill { padding: 8px 16px; border: 1px solid var(--line); border-radius: 100px; font-size: 13.5px; color: var(--slate); transition: all 0.2s; cursor: pointer; background: var(--white); }
+  .topic-pill:hover, .topic-pill.active { background: var(--navy); color: var(--ivory); border-color: var(--navy); }
+
+  .featured-article {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    gap: 48px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 80px;
+  }
+  .featured-visual { min-height: 340px; background: linear-gradient(135deg, var(--navy), var(--indigo)); position: relative; overflow: hidden; }
+  .featured-visual::before { content: ''; position: absolute; top: -80px; right: -80px; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(201,106,63,0.3), transparent 65%); }
+  .featured-visual::after { content: ''; position: absolute; bottom: -120px; left: -60px; width: 280px; height: 280px; border-radius: 50%; border: 1px solid rgba(246,241,232,0.15); }
+  .featured-body { padding: 48px 48px 48px 0; display: flex; flex-direction: column; justify-content: center; }
+  .featured-body .article-topic { margin-bottom: 18px; }
+  .featured-body h2 { font-size: 34px; line-height: 1.15; margin-bottom: 18px; }
+  .featured-body .excerpt { font-size: 17px; line-height: 1.6; color: var(--muted); margin-bottom: 24px; max-width: 50ch; }
+  .featured-body .meta { font-size: 13px; color: var(--muted); margin-bottom: 22px; }
+  @media (max-width: 960px) {
+    .article-grid { grid-template-columns: 1fr; }
+    .featured-article { grid-template-columns: 1fr; }
+    .featured-body { padding: 32px; }
+    .featured-visual { min-height: 200px; }
+  }
+
+  .newsletter-block {
+    background: var(--navy);
+    color: var(--ivory);
+    border-radius: 10px;
+    padding: 64px 56px;
+    text-align: center;
+    margin-top: 80px;
+  }
+  .newsletter-block h2 { color: var(--ivory); }
+  .newsletter-block p { color: rgba(246,241,232,0.8); max-width: 56ch; margin: 0 auto 28px auto; font-size: 18px; }
+  .newsletter-form { display: flex; gap: 10px; max-width: 460px; margin: 0 auto; }
+  .newsletter-form input { flex: 1; padding: 14px 18px; border: 1px solid rgba(246,241,232,0.2); border-radius: 4px; font-family: inherit; font-size: 15px; background: rgba(255,255,255,0.06); color: var(--ivory); }
+  .newsletter-form input::placeholder { color: rgba(246,241,232,0.5); }
+  .newsletter-form input:focus { outline: none; border-color: var(--clay); background: rgba(255,255,255,0.1); }
+  @media (max-width: 520px) { .newsletter-form { flex-direction: column; } .newsletter-block { padding: 44px 28px; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="logo">Success Empowered<span class="dot">.</span></a>
+    <nav><ul class="nav-links">
+      <li><a href="leadership-development.html">Leadership</a></li>
+      <li><a href="culture-transformation.html">Culture</a></li>
+      <li><a href="executive-coaching.html">Coaching</a></li>
+      <li><a href="approach.html">Approach</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="insights.html">Insights</a></li>
+      <li><a href="contact.html" class="btn">Start a conversation <span class="arrow">→</span></a></li>
+    </ul></nav>
+    <button class="nav-burger" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Insights</span>
+    <h1>Writing, research, and thinking on leadership, culture, and <em style="color:var(--clay);">the human work of modern organisations.</em></h1>
+    <p class="lede">Practical notes from our work with leaders and teams. Long-form where it's worth it; short where it isn't.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="topics">
+      <span class="topic-pill active">All</span>
+      <span class="topic-pill">Leadership</span>
+      <span class="topic-pill">Culture</span>
+      <span class="topic-pill">Self-awareness</span>
+      <span class="topic-pill">Coaching</span>
+      <span class="topic-pill">Modern work</span>
+      <span class="topic-pill">Case notes</span>
+    </div>
+
+    <article class="featured-article">
+      <div class="featured-visual"></div>
+      <div class="featured-body">
+        <span class="article-topic">Flagship · Leadership</span>
+        <h2>The leadership model for 2026 — a synthesis.</h2>
+        <p class="excerpt">The leader archetype of the last decade — certainty, control, charisma — doesn't fit the conditions of the next. What replaces it isn't a new model. It's a different set of foundations.</p>
+        <div class="meta">By Christopher Greenwood · 14 min read</div>
+        <a href="#" class="card-link">Read the article →</a>
+      </div>
+    </article>
+
+    <div class="article-grid">
+      <a href="#" class="article">
+        <div class="article-visual"></div>
+        <div class="article-body">
+          <span class="article-topic">Leadership</span>
+          <h3 class="article-title">Why most leadership training fails — and what actually works.</h3>
+          <div class="article-meta">By Christopher Greenwood · 9 min</div>
+        </div>
+      </a>
+      <a href="#" class="article">
+        <div class="article-visual v2"></div>
+        <div class="article-body">
+          <span class="article-topic">Culture</span>
+          <h3 class="article-title">Culture is what leaders model and tolerate. Everything else is decoration.</h3>
+          <div class="article-meta">By Aditi Sahai · 7 min</div>
+        </div>
+      </a>
+      <a href="#" class="article">
+        <div class="article-visual v3"></div>
+        <div class="article-body">
+          <span class="article-topic">Self-awareness</span>
+          <h3 class="article-title">The four things self-aware leaders know about themselves.</h3>
+          <div class="article-meta">By Christopher Greenwood · 8 min</div>
+        </div>
+      </a>
+      <a href="#" class="article">
+        <div class="article-visual v4"></div>
+        <div class="article-body">
+          <span class="article-topic">Modern work</span>
+          <h3 class="article-title">The middle manager squeeze — and the quiet cost of ignoring it.</h3>
+          <div class="article-meta">By Christopher Greenwood · 11 min</div>
+        </div>
+      </a>
+      <a href="#" class="article">
+        <div class="article-visual v5"></div>
+        <div class="article-body">
+          <span class="article-topic">Coaching</span>
+          <h3 class="article-title">Why most executive coaching is too polite.</h3>
+          <div class="article-meta">By Aditi Sahai · 6 min</div>
+        </div>
+      </a>
+      <a href="#" class="article">
+        <div class="article-visual v6"></div>
+        <div class="article-body">
+          <span class="article-topic">Culture</span>
+          <h3 class="article-title">How to measure culture change honestly.</h3>
+          <div class="article-meta">By Christopher Greenwood · 10 min</div>
+        </div>
+      </a>
+    </div>
+
+    <div id="newsletter" class="newsletter-block">
+      <span class="eyebrow" style="color:var(--clay);">Newsletter</span>
+      <h2>Get our writing in your inbox.</h2>
+      <p>One considered email a month on leadership, culture, and the human work of running organisations. No promotions. No clickbait.</p>
+      <form class="newsletter-form" onsubmit="event.preventDefault(); this.innerHTML='<p style=&quot;margin:0;color:var(--ivory);&quot;>Thank you — check your inbox to confirm.</p>';">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit" class="btn">Subscribe →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><h3>Success Empowered</h3><p>A leadership and culture consultancy helping organisations develop the human capacity they need to lead what's next.</p></div>
+      <div><h4>What we do</h4><ul><li><a href="leadership-development.html">Leadership Development</a></li><li><a href="culture-transformation.html">Culture Transformation</a></li><li><a href="executive-coaching.html">Executive Coaching</a></li><li><a href="team-interventions.html">Team Interventions</a></li></ul></div>
+      <div><h4>About</h4><ul><li><a href="about.html">Our Story</a></li><li><a href="team.html">Team &amp; Associates</a></li><li><a href="approach.html">Our Approach</a></li><li><a href="insights.html">Insights</a></li></ul></div>
+      <div><h4>Client work</h4><ul><li><a href="#">Case Studies</a></li><li><a href="#">Client Outcomes</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="contact.html">Start a conversation</a></li><li><a href="mailto:team@successempowered.com">team@successempowered.com</a></li><li><a href="tel:+447709532849">+44 7709 532849</a></li><li><a href="tel:+919619102556">+91 9619 102556</a></li></ul></div>
+    </div>
+    <div class="footer-accred"><div class="accred-logos"><span>ICF Accredited</span><span>EMCC Member</span><span>CIPD</span></div><div class="footer-legal"><span>© Success Empowered 2026</span><a href="#">Privacy</a><a href="#">Terms</a><a href="strategy.html">Strategy pack</a></div></div>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
