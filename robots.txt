@@ -1,5 +1,57 @@
+# Success Mpowered — robots.txt
+# https://www.successmpowered.com
+
+# ── Default: all crawlers welcome ──────────────────────────────────────────
 User-agent: *
 Allow: /
+Disallow: /admin/
 Disallow: /strategy.html
+Disallow: /assets/linkedin/
 
+# ── Google ──────────────────────────────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# ── Bing / Microsoft ────────────────────────────────────────────────────────
+User-agent: Bingbot
+Allow: /
+
+# ── OpenAI — ChatGPT web browsing + AI search ───────────────────────────────
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# ── Anthropic (Claude) ──────────────────────────────────────────────────────
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# ── Perplexity ──────────────────────────────────────────────────────────────
+User-agent: PerplexityBot
+Allow: /
+
+# ── Meta / Facebook ─────────────────────────────────────────────────────────
+User-agent: FacebookBot
+Allow: /
+
+# ── Apple ───────────────────────────────────────────────────────────────────
+User-agent: Applebot
+Allow: /
+
+# ── Common Crawl (used in many AI training datasets) ────────────────────────
+User-agent: CCBot
+Allow: /
+
+# ── DuckDuckGo ──────────────────────────────────────────────────────────────
+User-agent: DuckDuckBot
+Allow: /
+
+# ── Sitemap ─────────────────────────────────────────────────────────────────
 Sitemap: https://www.successmpowered.com/sitemap.xml
