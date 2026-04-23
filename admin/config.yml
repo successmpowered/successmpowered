@@ -2,8 +2,7 @@ backend:
   name: github
   repo: successmpowered/successmpowered
   branch: main
-  auth_type: pkce
-  app_id: Ov23liG7FzDHCD4DQkDz
+  base_url: https://sm-cms-auth.christopher-629.workers.dev
 
 media_folder: assets/img/posts
 public_folder: /assets/img/posts
