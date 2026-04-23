@@ -137,6 +137,7 @@ strong { color: var(--navy); font-weight: 600; }
   font-weight: 500;
 }
 .nav-links a:hover { color: var(--clay); }
+.nav-divider { width: 1px; height: 16px; background: var(--line); align-self: center; flex-shrink: 0; }
 
 .btn {
   display: inline-flex;
