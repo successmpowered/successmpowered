@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leadership &amp; Culture Self-Assessment | Success Mpowered</title>
+  <meta name="description" content="Two short assessments. Ten honest questions each. A clearer picture of yourself as a leader — or of the culture you are building.">
+  <link rel="canonical" href="https://www.successmpowered.com/assess.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #F9F6F2; --card: #FFFFFF; --ink: #1A1714; --ink-mid: #5A5450; --ink-light: #9A9390;
+      --accent: #C96A3F; --accent-bg: #FAF0EB; --accent-dark: #B15A30;
+      --sage: #5C7A56; --border: #E5DDD5; --radius: 16px; --radius-sm: 10px;
+      --shadow: 0 4px 32px rgba(26,23,20,0.08); --shadow-sm: 0 2px 12px rgba(26,23,20,0.06);
+      --navy: #0E1E3F;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Jost', sans-serif; background: var(--bg); color: var(--ink); font-size:16px; line-height:1.6; }
+    h1,h2,h3 { font-family: 'Cormorant Garamond', Georgia, serif; line-height:1.2; }
+
+    /* Site mini-header */
+    .assess-header { background: #fff; border-bottom: 1px solid #E2E0DA; padding: 14px 32px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 200; }
+    .assess-logo { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 500; color: var(--navy); text-decoration: none; letter-spacing: -0.01em; }
+    .assess-logo .dot { color: var(--accent); }
+    .assess-back { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; color: #6B6E76; text-decoration: none; transition: color 0.2s; }
+    .assess-back:hover { color: var(--accent); }
+
+    .wrap { max-width:720px; margin:0 auto; padding:48px 24px 80px; }
+    @media(max-width:600px){ .wrap{padding:32px 16px 80px;} }
+    .card { background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); padding:48px; }
+    @media(max-width:600px){ .card{padding:28px 20px;} }
+    .tag { display:inline-flex; font-size:0.68rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); background:var(--accent-bg); border-radius:4px; padding:4px 10px; margin-bottom:18px; }
+    .lbl { font-size:0.7rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-light); }
+    hr.div { height:1px; background:var(--border); border:none; margin:28px 0; }
+    .btn { display:inline-block; border:none; cursor:pointer; font-family:'Jost',sans-serif; font-weight:500; font-size:0.875rem; letter-spacing:0.04em; border-radius:8px; transition:all 0.2s; text-decoration:none; text-align:center; }
+    .btn-p { background:var(--navy); color:#fff; padding:16px 32px; }
+    .btn-p:hover { background:#1a2e5a; }
+    .btn-a { background:var(--accent); color:#fff; padding:16px 32px; }
+    .btn-a:hover { background:var(--accent-dark); }
+    .btn-g { background:transparent; color:var(--ink-mid); padding:10px 18px; border:1.5px solid var(--border); }
+    .btn-g:hover { border-color:var(--accent); color:var(--accent); }
+    .btn-w { width:100%; display:block; }
+    .btn-cg { display:inline-block; background:transparent; color:#C8C2BC; padding:14px 28px; border-radius:8px; border:1.5px solid #4A4540; cursor:pointer; font-family:'Jost',sans-serif; font-size:0.875rem; text-decoration:none; transition:all 0.2s; }
+    .btn-cg:hover { border-color:var(--accent); color:var(--accent); }
+    input[type=text],input[type=email] { width:100%; padding:12px 16px; border-radius:var(--radius-sm); border:1.5px solid var(--border); font-family:'Jost',sans-serif; font-size:0.9rem; font-weight:300; color:var(--ink); background:#fff; outline:none; transition:border-color 0.15s; }
+    input[type=text]:focus,input[type=email]:focus { border-color:var(--accent); }
+    input.err { border-color:#C17A5A !important; }
+    .flbl { display:block; font-size:0.7rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-light); margin-bottom:6px; margin-top:16px; }
+    .pb-bg { height:3px; background:var(--border); border-radius:99px; overflow:hidden; }
+    .pb-fill { height:100%; background:var(--accent); border-radius:99px; transition:width 0.4s ease; }
+    .sopt { display:flex; align-items:center; gap:14px; padding:13px 18px; border-radius:var(--radius-sm); border:1.5px solid var(--border); background:transparent; cursor:pointer; text-align:left; width:100%; font-family:'Jost',sans-serif; transition:all 0.15s; margin-bottom:8px; }
+    .sopt:hover,.sopt.sel { border-color:var(--accent); background:var(--accent-bg); }
+    .sopt .radio { width:26px; height:26px; border-radius:50%; border:1.5px solid var(--border); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:all 0.15s; }
+    .sopt.sel .radio { border-color:var(--accent); background:var(--accent); }
+    .sopt .onum { color:var(--ink-light); font-weight:500; font-size:0.85rem; margin-right:6px; }
+    .sopt.sel .onum { color:var(--accent-dark); }
+    .sopt .otxt { font-size:0.875rem; font-weight:300; color:var(--ink-mid); }
+    .sopt.sel .otxt { color:var(--accent); font-weight:400; }
+    .fnav { position:fixed; bottom:0; left:0; right:0; background:rgba(249,246,242,0.93); backdrop-filter:blur(12px); border-top:1px solid var(--border); padding:14px 24px; display:flex; justify-content:space-between; align-items:center; z-index:100; }
+    .scircle { position:relative; width:160px; height:160px; margin:0 auto 24px; }
+    .sinner { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+    .stats { display:flex; background:var(--accent-bg); border-radius:var(--radius-sm); padding:20px 24px; margin-bottom:32px; }
+    .stat { flex:1; text-align:center; }
+    .stv { font-family:'Cormorant Garamond',serif; font-size:1.8rem; font-weight:600; color:var(--accent); }
+    .two { display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); margin-bottom:16px; }
+    .cta-dk { background:var(--navy); color:#fff; border-radius:var(--radius); padding:48px; text-align:center; margin-bottom:20px; }
+    @media(max-width:600px){ .cta-dk{padding:32px 24px;} }
+    .unlock { background:var(--accent-bg); border:1px dashed var(--accent); border-radius:var(--radius-sm); padding:28px; text-align:center; margin-top:28px; }
+    .cb { display:flex; gap:12px; align-items:flex-start; padding:16px; background:var(--bg); border-radius:var(--radius-sm); border:1.5px solid var(--border); margin:16px 0 20px; }
+    input[type=checkbox] { width:16px; height:16px; margin-top:2px; flex-shrink:0; accent-color:var(--accent); cursor:pointer; }
+    .qcards { display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
+    .qcard { padding:36px; border-radius:var(--radius); background:var(--card); border:1.5px solid var(--border); box-shadow:var(--shadow); cursor:pointer; text-align:left; transition:all 0.25s; font-family:'Jost',sans-serif; width:100%; }
+    .qcard:hover { border-color:var(--accent); box-shadow:0 8px 40px rgba(201,106,63,0.15); transform:translateY(-3px); background:var(--accent-bg); }
+    .screen { display:none; }
+    .screen.active { display:block; }
+    .si { animation:fu 0.35s ease both; }
+    @keyframes fu { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
+    .errmsg { color:#C17A5A; font-size:0.75rem; margin-top:4px; }
+    .priv { font-size:0.65rem; color:var(--ink-light); text-align:center; margin-top:12px; letter-spacing:0.05em; }
+    .nstep { display:flex; gap:16px; padding:16px 0; border-bottom:1px solid var(--border); }
+    .nstep:last-child { border-bottom:none; }
+    .nsnum { width:28px; height:28px; border-radius:50%; background:var(--accent-bg); color:var(--accent); display:flex; align-items:center; justify-content:center; font-size:0.75rem; font-weight:600; flex-shrink:0; }
+    .sitem { display:flex; gap:10px; margin-bottom:10px; }
+    .sdot { flex-shrink:0; font-size:0.7rem; margin-top:5px; }
+  </style>
+</head>
+<body>
+
+<!-- SITE MINI-HEADER -->
+<header class="assess-header">
+  <a href="index.html" class="assess-logo">Success <span class="dot">M</span>powered<span class="dot">.</span></a>
+  <a href="index.html" class="assess-back">← Back to site</a>
+</header>
+
+<!-- HOME -->
+<div id="s-home" class="screen active">
+<div class="wrap"><div class="si">
+  <div style="text-align:center;margin-bottom:48px;">
+    <div class="lbl" style="display:block;margin-bottom:20px;">Self-Assessment</div>
+    <h1 style="font-size:clamp(2rem,6vw,3.2rem);margin-bottom:16px;line-height:1.1;">Know where you stand.<br><span style="color:var(--accent);">Lead from there.</span></h1>
+    <p style="font-size:1.05rem;font-weight:300;color:var(--ink-mid);max-width:460px;margin:0 auto;line-height:1.7;">Choose a short assessment below. Ten honest questions. A clearer picture of yourself — or your organisation.</p>
+  </div>
+  <div class="qcards">
+    <button class="qcard" onclick="startQuiz('leadership')">
+      <div style="font-size:1.6rem;margin-bottom:14px;opacity:0.45;">◈</div>
+      <div class="lbl" style="display:block;margin-bottom:8px;">Leadership Check-In</div>
+      <h2 style="font-size:1.3rem;margin-bottom:10px;line-height:1.25;">Leadership Foundation Assessment</h2>
+      <p style="font-size:0.875rem;font-weight:300;color:var(--ink-mid);line-height:1.6;margin-bottom:20px;">Two minutes. Ten questions. A clearer picture of where you lead from.</p>
+      <div style="display:flex;align-items:center;justify-content:space-between;"><span class="lbl">10 questions · 2 min</span><span style="color:var(--accent);font-size:1.1rem;">→</span></div>
+    </button>
+    <button class="qcard" onclick="startQuiz('culture')">
+      <div style="font-size:1.6rem;margin-bottom:14px;opacity:0.45;">◉</div>
+      <div class="lbl" style="display:block;margin-bottom:8px;">Culture Check-In</div>
+      <h2 style="font-size:1.3rem;margin-bottom:10px;line-height:1.25;">Workplace Culture Assessment</h2>
+      <p style="font-size:0.875rem;font-weight:300;color:var(--ink-mid);line-height:1.6;margin-bottom:20px;">Ten questions. A clearer picture of the culture you are actually building.</p>
+      <div style="display:flex;align-items:center;justify-content:space-between;"><span class="lbl">10 questions · 2 min</span><span style="color:var(--accent);font-size:1.1rem;">→</span></div>
+    </button>
+  </div>
+  <p class="lbl" style="text-align:center;margin-top:36px;opacity:0.4;">Your responses are private. No spam. Ever.</p>
+</div></div></div>
+
+<!-- INTRO -->
+<div id="s-intro" class="screen">
+<div class="wrap"><div class="si">
+  <button onclick="goHome()" class="btn btn-g" style="margin-bottom:28px;font-size:0.8rem;">← Back</button>
+  <div class="card">
+    <div class="tag" id="i-tag"></div>
+    <h1 id="i-title" style="font-size:clamp(1.5rem,4vw,2.4rem);margin-bottom:20px;"></h1>
+    <hr class="div">
+    <p id="i-body" style="font-size:1rem;font-weight:300;color:var(--ink-mid);line-height:1.75;margin-bottom:10px;"></p>
+    <p id="i-aud" style="font-size:0.85rem;color:var(--ink-light);font-weight:300;margin-bottom:28px;"></p>
+    <div class="stats">
+      <div class="stat"><div class="stv">10</div><div class="lbl">Questions</div></div>
+      <div class="stat"><div class="stv">2 min</div><div class="lbl">To complete</div></div>
+      <div class="stat"><div class="stv">4</div><div class="lbl">Result levels</div></div>
+    </div>
+    <button onclick="beginQuiz()" class="btn btn-p btn-w" style="padding:18px;">Begin the Assessment →</button>
+    <p class="priv" style="margin-top:16px;">Honest answers give the most useful results.</p>
+  </div>
+</div></div></div>
+
+<!-- QUESTION -->
+<div id="s-question" class="screen">
+<div class="wrap"><div class="si">
+  <div style="margin-bottom:28px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+      <span class="lbl" id="q-qlbl"></span>
+      <span class="lbl" id="q-ptxt"></span>
+    </div>
+    <div class="pb-bg"><div class="pb-fill" id="q-pbar" style="width:0%"></div></div>
+  </div>
+  <div class="card" style="padding:40px 44px;">
+    <div class="tag" id="q-theme"></div>
+    <h2 id="q-text" style="font-size:clamp(1.1rem,3vw,1.45rem);line-height:1.5;margin-bottom:32px;font-weight:600;"></h2>
+    <div id="q-opts"></div>
+  </div>
+</div></div>
+<div class="fnav">
+  <button onclick="prevQ()" class="btn btn-g">← Previous</button>
+  <span class="lbl" id="nav-c"></span>
+  <button onclick="nextQ()" id="next-btn" class="btn btn-p" style="padding:12px 24px;opacity:0.35;cursor:not-allowed;">Next →</button>
+</div>
+<div style="height:80px;"></div>
+</div>
+
+<!-- TEASER -->
+<div id="s-teaser" class="screen">
+<div class="wrap"><div class="si">
+  <div class="card">
+    <div style="text-align:center;margin-bottom:32px;">
+      <div class="tag" id="t-tag"></div>
+      <div class="scircle">
+        <svg viewBox="0 0 160 160" style="position:absolute;inset:0;width:100%;height:100%;">
+          <circle cx="80" cy="80" r="66" fill="none" stroke="var(--border)" stroke-width="8"/>
+          <circle id="t-arc" cx="80" cy="80" r="66" fill="none" stroke-width="8" stroke-linecap="round"
+            stroke-dasharray="414.7" stroke-dashoffset="414.7" transform="rotate(-90 80 80)"
+            style="transition:stroke-dashoffset 1.2s ease;"/>
+        </svg>
+        <div class="sinner">
+          <div id="t-score" style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:600;line-height:1;"></div>
+          <div class="lbl" style="font-size:0.6rem;margin-top:2px;">out of 50</div>
+        </div>
+      </div>
+      <h2 id="t-btitle" style="font-size:1.7rem;margin-bottom:4px;"></h2>
+      <p id="t-bsub" class="lbl"></p>
+    </div>
+    <hr class="div">
+    <p id="t-text" style="font-size:1rem;font-weight:300;color:var(--ink-mid);line-height:1.75;text-align:center;font-style:italic;"></p>
+    <div class="unlock">
+      <div style="font-size:1.3rem;margin-bottom:10px;">🔓</div>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;margin-bottom:10px;">Unlock Your Full Result</h3>
+      <p style="font-size:0.875rem;font-weight:300;color:var(--ink-mid);line-height:1.65;margin-bottom:20px;">Enter a few details to receive your complete assessment — including key strengths, blind spots, and three practical next steps tailored to your result.</p>
+      <button onclick="goCapture()" class="btn btn-a btn-w" style="padding:16px;">Unlock My Full Result →</button>
+      <p class="priv" style="margin-top:10px;">No spam. Your details are used only to deliver your result.</p>
+    </div>
+  </div>
+</div></div></div>
+
+<!-- CAPTURE -->
+<div id="s-capture" class="screen">
+<div class="wrap"><div class="si">
+  <div class="card">
+    <div class="tag" id="c-tag"></div>
+    <h2 style="font-size:1.8rem;margin-bottom:12px;">Just a few details</h2>
+    <p style="font-size:0.925rem;font-weight:300;color:var(--ink-mid);line-height:1.7;margin-bottom:24px;">Enter your details below to unlock your full personalised result — including your key strengths, likely blind spots, and three tailored next steps.</p>
+    <label class="flbl" style="margin-top:0;">Your Name *</label>
+    <input type="text" id="f-name" placeholder="e.g. Sarah Connell" />
+    <span class="errmsg" id="e-name" style="display:none;">Please enter your name</span>
+    <label class="flbl">Work Email *</label>
+    <input type="email" id="f-email" placeholder="you@yourcompany.com" />
+    <span class="errmsg" id="e-email" style="display:none;">Please enter a valid email address</span>
+    <label class="flbl">Organisation</label>
+    <input type="text" id="f-org" placeholder="Your company or organisation" />
+    <label class="flbl">Your Role / Title</label>
+    <input type="text" id="f-role" placeholder="e.g. Head of People, Founder, Team Lead" />
+    <div class="cb" id="cb-block" style="margin-top:20px;">
+      <input type="checkbox" id="f-consent" />
+      <label for="f-consent" style="font-size:0.8rem;font-weight:300;color:var(--ink-mid);line-height:1.6;cursor:pointer;">I agree to Success Mpowered using my details to send my full result and occasional relevant insights. I understand I can unsubscribe at any time. My details will never be sold or shared with third parties. <span style="color:var(--ink-light);">(GDPR compliant)</span></label>
+    </div>
+    <span class="errmsg" id="e-consent" style="display:none;margin-top:-12px;margin-bottom:12px;">Please confirm your consent to continue</span>
+    <button onclick="submitForm()" id="sub-btn" class="btn btn-a btn-w" style="padding:18px;margin-top:8px;">View My Full Result →</button>
+    <p class="priv" style="margin-top:16px;">We respect your privacy. No spam. Unsubscribe at any time.</p>
+  </div>
+</div></div></div>
+
+<!-- RESULTS -->
+<div id="s-results" class="screen">
+<div class="wrap"><div class="si">
+  <div class="card" id="r-hdr" style="text-align:center;margin-bottom:20px;padding:48px;">
+    <div class="lbl" id="r-qlbl" style="display:block;margin-bottom:14px;"></div>
+    <div id="r-score" style="font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:600;margin-bottom:10px;"></div>
+    <h1 id="r-bt" style="font-size:clamp(1.5rem,4vw,2.3rem);margin-bottom:6px;"></h1>
+    <p id="r-bs" class="lbl" style="margin-bottom:24px;"></p>
+    <div style="max-width:320px;margin:0 auto;">
+      <div style="height:6px;background:rgba(0,0,0,0.08);border-radius:99px;overflow:hidden;"><div id="r-bar" style="height:100%;border-radius:99px;transition:width 1.2s ease;width:0%;"></div></div>
+      <div style="display:flex;justify-content:space-between;margin-top:5px;"><span class="lbl" style="font-size:0.6rem;opacity:0.5;">10</span><span class="lbl" style="font-size:0.6rem;opacity:0.5;">50</span></div>
+    </div>
+  </div>
+  <div class="card" style="margin-bottom:16px;">
+    <div class="tag">Overview</div>
+    <p id="r-sum" style="font-size:1rem;font-weight:300;color:var(--ink-mid);line-height:1.75;"></p>
+  </div>
+  <div class="two">
+    <div class="card" style="border-top:3px solid var(--sage);padding:28px;">
+      <h3 style="font-size:1rem;font-family:'Cormorant Garamond',serif;color:var(--sage);margin-bottom:14px;">✓ Key Strengths</h3>
+      <ul id="r-str" style="list-style:none;"></ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--accent);padding:28px;">
+      <h3 style="font-size:1rem;font-family:'Cormorant Garamond',serif;color:var(--accent);margin-bottom:14px;">◎ Likely Blind Spots</h3>
+      <ul id="r-bls" style="list-style:none;"></ul>
+    </div>
+  </div>
+  <div class="card" style="margin-bottom:20px;">
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;margin-bottom:24px;">Three Practical Next Steps</h3>
+    <div id="r-steps"></div>
+  </div>
+  <div class="cta-dk">
+    <div class="lbl" style="color:var(--accent);display:block;margin-bottom:14px;">Success Mpowered</div>
+    <h2 style="color:#fff;font-size:clamp(1.4rem,3vw,2rem);margin-bottom:12px;">Ready to go deeper?</h2>
+    <p style="color:#C8C2BC;max-width:420px;margin:0 auto 28px;font-size:0.9rem;font-weight:300;line-height:1.7;">This assessment is a starting point. Success Mpowered works with leaders and organisations who want to close the gap between intention and lasting impact — through coaching, workshops, and culture diagnostics.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a href="contact.html" class="btn btn-a" style="text-decoration:none;padding:14px 28px;">Book a Conversation →</a>
+      <a href="mailto:team@successempowered.com?subject=Team workshop enquiry following my assessment" class="btn-cg">Request a Team Workshop</a>
+    </div>
+    <p style="font-size:0.65rem;color:#6A625C;margin-top:20px;letter-spacing:0.05em;">Or email us: team@successempowered.com</p>
+  </div>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:8px;">
+    <button id="r-other" onclick="tryOther()" class="btn btn-g"></button>
+    <button onclick="goHome()" class="btn btn-g" style="color:var(--ink-light);">Start Over</button>
+  </div>
+</div></div></div>
+
+<script>
+const SCALE=[{v:1,l:"Rarely true"},{v:2,l:"Occasionally"},{v:3,l:"Sometimes"},{v:4,l:"Mostly true"},{v:5,l:"Consistently"}];
+const QZ={
+  leadership:{id:"leadership",title:"Leadership Foundation Assessment",shortTitle:"Leadership Check-In",otherLabel:"Culture Check-In",otherQuiz:"culture",
+    intro:"This short assessment invites honest reflection on the habits, mindset, and behaviours that shape how you show up as a leader — to yourself and to others. There are no right or wrong answers. The value is in the honesty.",
+    audience:"For managers, team leads, founders, and emerging leaders.",
+    questions:[
+      {id:1,text:"When something goes wrong in my team, my first instinct is to understand what I could have done differently — not to look for who to blame.",theme:"Accountability"},
+      {id:2,text:"I pause to understand my own emotional state before responding in a difficult or high-pressure situation.",theme:"Self-Awareness"},
+      {id:3,text:"The commitments I make to my team are ones I consistently follow through on — even when it becomes inconvenient.",theme:"Consistency"},
+      {id:4,text:"People around me feel genuinely comfortable bringing me problems, honest disagreement, or unwelcome news.",theme:"Trust"},
+      {id:5,text:"I communicate expectations clearly enough that my team rarely has to guess what I mean, need, or value.",theme:"Clarity"},
+      {id:6,text:"When I listen to someone, I am fully present — not already composing my response or waiting for my turn to speak.",theme:"Listening"},
+      {id:7,text:"I actively create space for the people around me to grow, take initiative, and stretch beyond what feels safe.",theme:"Developing Others"},
+      {id:8,text:"Under significant pressure, I remain steady enough that my team takes their cue from my composure rather than my anxiety.",theme:"Resilience"},
+      {id:9,text:"The standards and values I hold others to are ones I visibly hold myself to as well.",theme:"Integrity"},
+      {id:10,text:"I seek honest feedback on my own performance and genuinely sit with what I hear — even when it is uncomfortable.",theme:"Growth Mindset"},
+    ],
+    bands:[
+      {r:[10,22],title:"Reactive Foundation",sub:"Leadership under pressure",col:"#C17A5A",bg:"#FBF0E9",
+        teaser:"Your results suggest some foundational patterns that may be limiting your impact. There is real growth available here.",
+        summary:"At this stage, leadership responses tend to be more reactive than intentional. Stress, uncertainty, or conflict can trigger patterns — blame, withdrawal, or inconsistency — that erode trust over time. This is not a judgment; it is a starting point. The most self-aware leaders often begin exactly here.",
+        str:["You are likely action-oriented and driven","You may have resilience built through difficult experience","Taking this assessment already signals a willingness to look honestly at yourself"],
+        bls:["Emotional responses may be leading decisions more than you realise","Your team may be uncertain about what to expect from you","The gap between your intentions and your impact may be wider than you think"],
+        ns:["Start a simple daily reflection practice: one thing you did well, one thing you'd do differently.","Ask one trusted colleague for honest, specific feedback — and listen without defending.","Identify one recurring trigger and practise a deliberate pause before your next response."]},
+      {r:[23,33],title:"Emerging Awareness",sub:"Leadership coming into focus",col:"#9E7B5A",bg:"#F7EFE7",
+        teaser:"You have genuine awareness and intention. The opportunity now is to close the gap between knowing and doing — consistently.",
+        summary:"You understand what good leadership looks like, and you are working toward it. At this stage, the challenge is consistency — the gap between your best days and your difficult days. You have the self-awareness to grow significantly with the right support and structure.",
+        str:["You have growing self-awareness about your impact on others","You likely have genuine care for the people you lead","Your instincts are developing — you are beginning to catch yourself"],
+        bls:["Consistency may still be context-dependent — you lead well when conditions are good","Under pressure, older habits may resurface","You may be better at seeing what needs to change than acting on it"],
+        ns:["Identify two or three leadership principles you want to embody and make them explicit to yourself and your team.","Build a regular check-in with someone who can hold you accountable — a mentor, coach, or trusted peer.","Practise making your thinking visible: tell your team why you are making certain decisions."]},
+      {r:[34,43],title:"Grounded and Growing",sub:"Leadership with clear foundations",col:"#5C7A56",bg:"#EBF3EA",
+        teaser:"You lead from a solid foundation. The people around you experience your steadiness. The next step is deepening your influence.",
+        summary:"You lead with a genuine combination of self-awareness, accountability, and care for others. Your team likely experiences you as trustworthy and fair. You are not perfect — nor do you pretend to be — and that authenticity is part of your strength. Your growth edge is moving from good to genuinely transformative.",
+        str:["You are reliably consistent in a way that creates psychological safety","You take accountability and model it for others","Your team likely trusts you and feels supported"],
+        bls:["You may be comfortable enough that deep challenge feels unnecessary","There may be blind spots in how your style lands for people different from you","Growing others to lead independently — not just alongside you — may be an edge"],
+        ns:["Invest deliberately in developing the leadership of others — create real stretch opportunities.","Ask for 360° feedback from people at different levels and pay particular attention to surprises.","Identify one leadership habit that has served you well but may now be a ceiling — and experiment with releasing it."]},
+      {r:[44,50],title:"Clear Leadership Influence",sub:"Leadership that multiplies",col:"#4A6B44",bg:"#E6F0E5",
+        teaser:"Your leadership creates genuine ripples. People grow around you. The question now is how you extend and share that influence.",
+        summary:"You demonstrate a rare combination of inner clarity, behavioural consistency, and genuine care for the growth of others. Your leadership likely creates an environment where people feel safe to do their best work. At this level, your greatest leverage is in how you develop other leaders and build cultures that sustain themselves.",
+        str:["You create trust and psychological safety almost naturally","You lead with integrity — your values and actions align","You help others grow without needing to control outcomes"],
+        bls:["High-performing leaders can sometimes unconsciously raise the bar beyond what is sustainable for others","Your own standards may make it harder to genuinely empathise with those earlier in their journey","Succession and scaling your influence beyond your immediate presence is a worthy next challenge"],
+        ns:["Consider how you are actively building leadership capacity in others — not just around you, but beyond you.","Seek out genuinely diverse perspectives: people who will challenge your thinking, not affirm it.","Explore whether your leadership framework is documented, teachable, and living beyond you."]},
+    ]},
+  culture:{id:"culture",title:"Workplace Culture Assessment",shortTitle:"Culture Check-In",otherLabel:"Leadership Check-In",otherQuiz:"leadership",
+    intro:"Culture is not what organisations say they value — it is what people actually experience day to day. This short assessment helps you look honestly at whether your culture supports the conditions where people and performance genuinely thrive.",
+    audience:"For HR leaders, founders, leadership teams, and managers.",
+    questions:[
+      {id:1,text:"People in our organisation feel genuinely safe to speak up, raise concerns, or respectfully disagree — without fear of being dismissed or penalised.",theme:"Psychological Safety"},
+      {id:2,text:"There is a clear sense of purpose and direction that most people across the organisation genuinely understand and believe in.",theme:"Clarity & Direction"},
+      {id:3,text:"When mistakes happen here, the focus is on understanding and improving — not on blame, shame, or quietly ignoring what went wrong.",theme:"Learning Culture"},
+      {id:4,text:"People feel genuinely recognised for their contributions in ways that feel meaningful — not just during annual reviews or when something goes right.",theme:"Recognition"},
+      {id:5,text:"Accountability is consistent across teams and levels: expectations are clear, and people follow through — including those in senior roles.",theme:"Accountability"},
+      {id:6,text:"Collaboration across teams or functions is natural and effective — not fragmented, territorial, or driven by internal politics.",theme:"Collaboration"},
+      {id:7,text:"People here have real opportunities to learn, develop, and grow — and they feel actively supported in doing so.",theme:"Growth & Development"},
+      {id:8,text:"Communication in our organisation is honest, timely, and clear — people are not left to fill gaps with rumour or assumption.",theme:"Communication"},
+      {id:9,text:"Our organisation responds to change or uncertainty with adaptability and collective steadiness — not panic, avoidance, or rigidity.",theme:"Adaptability"},
+      {id:10,text:"The day-to-day experience of working here genuinely reflects the values this organisation says it holds.",theme:"Integrity & Alignment"},
+    ],
+    bands:[
+      {r:[10,22],title:"Fragile Culture",sub:"Significant misalignment present",col:"#C17A5A",bg:"#FBF0E9",
+        teaser:"Your results suggest a culture under strain. There are likely real costs — to performance, retention, and wellbeing — that are worth taking seriously.",
+        summary:"At this stage, there is likely a meaningful gap between what the organisation says it values and what people actually experience. Trust may be low, communication inconsistent, and accountability applied unevenly. This creates an environment where people hold back, self-protect, and disengage — often without leadership being fully aware of how deep the problem runs.",
+        str:["Taking an honest look at culture is itself a significant first step","There is often untapped energy and goodwill in people who care but feel unheard","Cultural challenges at this level are solvable — with clarity, commitment, and the right support"],
+        bls:["The gap between leadership's perception of culture and employees' lived experience may be substantial","High performers and trusted voices may already be quietly looking elsewhere","Surface-level fixes — a new value statement, a team day — will not move the needle here"],
+        ns:["Commission an honest, confidential culture diagnostic — not a survey that confirms the narrative you want.","Identify the two or three specific behavioural patterns (not values statements) that are most damaging trust.","Start with leadership: culture changes when leadership behaviour changes first."]},
+      {r:[23,33],title:"Functional but Inconsistent",sub:"Culture with untapped potential",col:"#9E7B5A",bg:"#F7EFE7",
+        teaser:"You have real foundations to build on — but inconsistency is creating friction that limits what your people and organisation can do.",
+        summary:"Your culture works — on good days, in some teams, under certain conditions. But the experience is uneven. Pockets of real trust and collaboration coexist with areas of frustration, confusion, or quiet disengagement. The issue is not usually intention — it is inconsistency in behaviour, communication, and accountability across the organisation.",
+        str:["There are genuine bright spots — high-trust teams, strong managers, committed individuals","The organisation likely has a cultural intention that people want to believe in","There is enough stability to build from — this is not starting from zero"],
+        bls:["The best people notice inconsistency most acutely — and lose faith fastest when they see double standards","Middle management is often where cultural intentions get lost or distorted","Recognition and growth opportunities may be less equitable than they appear from the top"],
+        ns:["Identify the specific cultural inconsistencies that people experience most — and name them openly.","Invest in your middle layer: team leads and managers shape the day-to-day culture more than any value statement.","Create a simple mechanism for regular, honest cultural feedback that leaders genuinely act on."]},
+      {r:[34,43],title:"Healthy and Developing",sub:"Culture with real momentum",col:"#5C7A56",bg:"#EBF3EA",
+        teaser:"Your culture has genuine strengths that people experience daily. The opportunity now is deepening and making it more deliberate.",
+        summary:"You have built something real. People generally feel safe, respected, and able to do meaningful work. There is a sense of shared direction and mutual accountability. The culture is not perfect — and you are aware enough to know that — but the foundations are strong. Your challenge is moving from a healthy culture to one that actively multiplies performance and wellbeing.",
+        str:["Psychological safety is likely present enough for people to take risks and speak honestly","There is real trust between leadership and teams in most areas","People feel broadly recognised and supported in their development"],
+        bls:["Organisational growth or structural change can erode culture faster than leaders expect","Some voices — quieter, newer, or more diverse — may not yet feel as included as the data suggests","Culture at this stage can become comfortable rather than continuing to evolve"],
+        ns:["Identify the two or three cultural practices that are working best — and make them explicit, named, and shared.","Invest in the development of your leaders as culture-builders, not just managers of tasks.","Create a regular rhythm of honest cultural reflection at leadership team level — not just HR's responsibility."]},
+      {r:[44,50],title:"Strong, Trust-Based Culture",sub:"Culture as a genuine advantage",col:"#4A6B44",bg:"#E6F0E5",
+        teaser:"Your culture is a genuine organisational asset. People feel it, and it shows in how your teams work and grow together.",
+        summary:"You have built something rare: a culture where psychological safety, accountability, and genuine care for people coexist and reinforce each other. People experience alignment between what the organisation says and what it does. Trust is the default — not something earned only in exceptional circumstances. This is a culture that attracts people who want to do their best work.",
+        str:["Trust and psychological safety are embedded — not dependent on individual managers","Your culture likely acts as a competitive advantage in attracting and retaining talent","Accountability is consistent and fair, which creates clarity and respect"],
+        bls:["Strong cultures can sometimes create subtle pressure toward conformity — watch for the voices that still feel marginal","Sustaining a strong culture through rapid growth or leadership change requires deliberate architecture","There may be complacency risk: excellent cultures require ongoing attention, not just maintenance"],
+        ns:["Document your cultural practices in ways that can survive leadership change and organisational growth.","Actively seek the experiences of the people who feel least included — they will tell you what is still missing.","Consider how you can share what you have built: mentoring other organisations, publishing your learning, or developing your people as culture ambassadors."]},
+    ]}
+};
+let S={quiz:null,qi:0,ans:{},score:0,band:null};
+function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));const el=document.getElementById('s-'+id);el.classList.add('active');const si=el.querySelector('.si');if(si){si.style.animation='none';si.offsetHeight;si.style.animation='';}window.scrollTo({top:0,behavior:'smooth'});}
+function goHome(){S={quiz:null,qi:0,ans:{},score:0,band:null};show('home');}
+function getBand(q,sc){return q.bands.find(b=>sc>=b.r[0]&&sc<=b.r[1]);}
+function startQuiz(id){S.quiz=QZ[id];S.ans={};S.qi=0;document.getElementById('i-tag').textContent=S.quiz.shortTitle;document.getElementById('i-title').textContent=S.quiz.title;document.getElementById('i-body').textContent=S.quiz.intro;document.getElementById('i-aud').textContent=S.quiz.audience;show('intro');}
+function beginQuiz(){S.qi=0;renderQ();show('question');}
+function tryOther(){startQuiz(S.quiz.otherQuiz);}
+function renderQ(){
+  const q=S.quiz.questions[S.qi],tot=S.quiz.questions.length,isLast=S.qi===tot-1;
+  document.getElementById('q-qlbl').textContent=S.quiz.shortTitle;
+  document.getElementById('q-ptxt').textContent=`Question ${S.qi+1} of ${tot}`;
+  document.getElementById('q-pbar').style.width=(S.qi/tot*100)+'%';
+  document.getElementById('q-theme').textContent=q.theme;
+  document.getElementById('q-text').textContent=q.text;
+  document.getElementById('nav-c').textContent=`${S.qi+1} / ${tot}`;
+  document.getElementById('next-btn').textContent=isLast?'See My Results →':'Next →';
+  const c=document.getElementById('q-opts');c.innerHTML='';
+  SCALE.forEach(({v,l})=>{
+    const sel=S.ans[q.id]===v;
+    const btn=document.createElement('button');
+    btn.className='sopt'+(sel?' sel':'');
+    btn.innerHTML=`<div class="radio">${sel?'<svg width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4.5L3.8 7.5L10 1.5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>':''}</div><span class="onum">${v}</span><span class="otxt">${l}</span>`;
+    btn.onclick=()=>{S.ans[q.id]=v;renderQ();};
+    c.appendChild(btn);
+  });
+  const nb=document.getElementById('next-btn');const ans=S.ans[q.id]!==undefined;nb.style.opacity=ans?'1':'0.35';nb.style.cursor=ans?'pointer':'not-allowed';
+}
+function nextQ(){const q=S.quiz.questions[S.qi];if(S.ans[q.id]===undefined)return;if(S.qi===S.quiz.questions.length-1){S.score=Object.values(S.ans).reduce((a,b)=>a+b,0);S.band=getBand(S.quiz,S.score);renderTeaser();show('teaser');}else{S.qi++;renderQ();window.scrollTo({top:0});}}
+function prevQ(){if(S.qi===0)show('intro');else{S.qi--;renderQ();window.scrollTo({top:0});}}
+function renderTeaser(){const{score,band}=S,pct=((score-10)/40)*100,circ=414.7;document.getElementById('t-tag').textContent=S.quiz.shortTitle+' · Your Results';document.getElementById('t-score').textContent=score;document.getElementById('t-score').style.color=band.col;document.getElementById('t-btitle').textContent=band.title;document.getElementById('t-btitle').style.color=band.col;document.getElementById('t-bsub').textContent=band.sub;document.getElementById('t-bsub').style.color=band.col;document.getElementById('t-text').textContent='"'+band.teaser+'"';const arc=document.getElementById('t-arc');arc.style.stroke=band.col;setTimeout(()=>{arc.style.strokeDashoffset=circ*(1-pct/100);},100);}
+function goCapture(){document.getElementById('c-tag').textContent=S.quiz.shortTitle;show('capture');}
+async function submitForm(){
+  const name=document.getElementById('f-name').value.trim(),
+        email=document.getElementById('f-email').value.trim(),
+        consent=document.getElementById('f-consent').checked,
+        org=document.getElementById('f-org').value.trim(),
+        role=document.getElementById('f-role').value.trim();
+  let ok=true;
+  document.getElementById('e-name').style.display=!name?'block':'none';if(!name)ok=false;
+  const ev=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);document.getElementById('e-email').style.display=!ev?'block':'none';if(!ev)ok=false;
+  document.getElementById('e-consent').style.display=!consent?'block':'none';document.getElementById('cb-block').style.borderColor=!consent?'#C17A5A':'var(--border)';if(!consent)ok=false;
+  if(!ok)return;
+  const btn=document.getElementById('sub-btn');btn.textContent='Sending…';btn.disabled=true;
+  try {
+    const fd=new FormData();
+    fd.append('name',name);
+    fd.append('email',email);
+    fd.append('_replyto',email);
+    fd.append('organisation',org||'Not provided');
+    fd.append('role',role||'Not provided');
+    fd.append('quiz',S.quiz.title);
+    fd.append('score',S.score+' / 50');
+    fd.append('band',S.band.title);
+    fd.append('band_subtitle',S.band.sub);
+    fd.append('source','Website Self-Assessment — '+S.quiz.shortTitle);
+    await fetch('https://formspree.io/f/mvzdvjyl',{method:'POST',body:fd,headers:{'Accept':'application/json'}});
+  } catch(e){/* silent fail — still show result */}
+  btn.textContent='Opening your result…';
+  setTimeout(()=>{renderResults();show('results');},500);
+}
+function renderResults(){
+  const{score,band,quiz}=S,pct=((score-10)/40)*100;
+  const hdr=document.getElementById('r-hdr');hdr.style.background=band.bg;hdr.style.border=`1px solid ${band.col}30`;
+  document.getElementById('r-qlbl').textContent=quiz.shortTitle+' · Your Result';document.getElementById('r-qlbl').style.color=band.col;
+  document.getElementById('r-score').textContent=score+' / 50';document.getElementById('r-score').style.color=band.col;
+  document.getElementById('r-bt').textContent=band.title;document.getElementById('r-bt').style.color=band.col;
+  document.getElementById('r-bs').textContent=band.sub;document.getElementById('r-bs').style.color=band.col;
+  const bar=document.getElementById('r-bar');bar.style.background=band.col;setTimeout(()=>{bar.style.width=pct+'%';},200);
+  document.getElementById('r-sum').textContent=band.summary;
+  document.getElementById('r-str').innerHTML=band.str.map(s=>`<li class="sitem"><span class="sdot" style="color:var(--sage)">◆</span><span style="font-size:0.875rem;font-weight:300;color:var(--ink-mid);line-height:1.65;">${s}</span></li>`).join('');
+  document.getElementById('r-bls').innerHTML=band.bls.map(s=>`<li class="sitem"><span class="sdot" style="color:var(--accent)">◆</span><span style="font-size:0.875rem;font-weight:300;color:var(--ink-mid);line-height:1.65;">${s}</span></li>`).join('');
+  document.getElementById('r-steps').innerHTML=band.ns.map((s,i)=>`<div class="nstep"><div class="nsnum">${i+1}</div><p style="font-size:0.9rem;font-weight:300;color:var(--ink-mid);line-height:1.7;padding-top:3px;margin:0;">${s}</p></div>`).join('');
+  document.getElementById('r-other').textContent=`Try the ${quiz.otherLabel}`;
+}
+// Auto-start from URL param: assess.html?quiz=leadership or ?quiz=culture
+(function(){const p=new URLSearchParams(window.location.search);const q=p.get('quiz');if(q&&QZ[q])startQuiz(q);})();
+</script>
+</body>
+</html>
