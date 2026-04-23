@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /strategy.html
+
+Sitemap: https://www.successmpowered.com/sitemap.xml
