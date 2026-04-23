@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LinkedIn Banner — Success Mpowered (1584×396)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0E1E3F;
+    --indigo: #2A2560;
+    --clay: #C96A3F;
+    --ivory: #F6F1E8;
+    --ivory-dim: rgba(246,241,232,0.65);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #2a2a2a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    font-family: 'Inter', sans-serif;
+    color: #aaa;
+  }
+  .instructions {
+    max-width: 1584px;
+    margin-bottom: 20px;
+    color: #ccc;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .instructions strong { color: #fff; }
+
+  /* The actual banner — exact LinkedIn dimensions */
+  .banner {
+    width: 1584px;
+    height: 396px;
+    background: var(--navy);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 120px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+
+  /* Subtle gradient overlay (matches site hero treatment) */
+  .banner::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,106,63,0.18), transparent 65%);
+    pointer-events: none;
+  }
+  .banner::after {
+    content: '';
+    position: absolute;
+    bottom: -300px;
+    left: -150px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 1px solid rgba(246,241,232,0.06);
+    pointer-events: none;
+  }
+
+  /* Content */
+  .banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 880px;
+  }
+
+  .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--clay);
+    margin-bottom: 24px;
+  }
+
+  .logo {
+    font-family: 'Fraunces', serif;
+    font-size: 68px;
+    font-weight: 400;
+    color: var(--ivory);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-bottom: 22px;
+  }
+  .logo .m, .logo .dot { color: var(--clay); }
+
+  .tagline {
+    font-family: 'Fraunces', serif;
+    font-size: 26px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--ivory-dim);
+    line-height: 1.35;
+    max-width: 720px;
+  }
+  .tagline em {
+    color: var(--ivory);
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  /* Right-side mark (subtle geometric anchor) */
+  .right-mark {
+    position: absolute;
+    right: 110px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 220px;
+    height: 220px;
+    border: 1px solid rgba(246,241,232,0.12);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  .right-mark::before {
+    content: '';
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border: 1px solid rgba(201,106,63,0.35);
+    border-radius: 50%;
+  }
+  .right-mark::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: var(--clay);
+    border-radius: 50%;
+  }
+</style>
+</head>
+<body>
+
+<div class="instructions">
+  <strong>LinkedIn Banner — 1584 × 396 px (exact LinkedIn spec).</strong>
+  Screenshot the navy block below at 1:1 and upload as your company page cover image.
+  In Chrome: right-click the banner → Inspect → click the device toolbar icon → set zoom to 100% → use a screenshot extension or the dev tools "Capture node screenshot" command.
+</div>
+
+<div class="banner">
+  <div class="banner-content">
+    <div class="eyebrow">Leadership &amp; Culture Consultancy</div>
+    <div class="logo">Success <span class="m">M</span>powered<span class="dot">.</span></div>
+    <div class="tagline">Better leaders. Healthier cultures.<br>Organisations that can <em>handle what's next.</em></div>
+  </div>
+  <div class="right-mark"></div>
+</div>
+
+</body>
+</html>

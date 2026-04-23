@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LinkedIn Featured Cards — Success Mpowered (1200×627)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0E1E3F;
+    --clay: #C96A3F;
+    --ivory: #F6F1E8;
+    --bone: #F9F6F2;
+    --ink: #1A1714;
+    --ink-mid: #5A5450;
+    --line: #E5DDD5;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #2a2a2a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    font-family: 'Inter', sans-serif;
+    color: #aaa;
+    gap: 30px;
+  }
+  .instructions {
+    max-width: 1000px;
+    color: #ccc;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .instructions strong { color: #fff; }
+
+  .item-label { font-size: 12px; color: #888; letter-spacing: 0.06em; text-transform: uppercase; text-align:center; margin-bottom: 10px; }
+
+  /* LinkedIn featured / share image — 1200×627 */
+  .feat {
+    width: 1200px;
+    height: 627px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+  }
+
+  /* CARD 1: Leadership Assessment */
+  .feat-1 {
+    background: var(--navy);
+    color: var(--ivory);
+    padding: 80px 90px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .feat-1::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,106,63,0.18), transparent 65%);
+  }
+  .feat-1::after {
+    content: '';
+    position: absolute;
+    bottom: -250px;
+    right: 100px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 1px solid rgba(246,241,232,0.08);
+  }
+  .feat-1 .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--clay);
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 2;
+  }
+  .feat-1 h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 76px;
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 28px;
+    max-width: 880px;
+    position: relative;
+    z-index: 2;
+  }
+  .feat-1 h1 em {
+    color: var(--clay);
+    font-style: italic;
+    font-weight: 400;
+  }
+  .feat-1 .sub {
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    font-style: italic;
+    color: rgba(246,241,232,0.65);
+    line-height: 1.4;
+    margin-bottom: 40px;
+    max-width: 720px;
+    position: relative;
+    z-index: 2;
+  }
+  .feat-1 .footer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+  }
+  .feat-1 .brand {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    color: var(--ivory);
+  }
+  .feat-1 .brand .m, .feat-1 .brand .dot { color: var(--clay); }
+  .feat-1 .url {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(246,241,232,0.5);
+    border-left: 1px solid rgba(246,241,232,0.2);
+    padding-left: 20px;
+  }
+
+  /* CARD 2: Culture Assessment — light variant */
+  .feat-2 {
+    background: var(--bone);
+    color: var(--ink);
+    padding: 80px 90px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .feat-2::before {
+    content: '';
+    position: absolute;
+    top: -150px;
+    right: -150px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,106,63,0.12), transparent 70%);
+  }
+  .feat-2 .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--clay);
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 2;
+  }
+  .feat-2 h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 76px;
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 28px;
+    max-width: 900px;
+    position: relative;
+    z-index: 2;
+  }
+  .feat-2 h1 em {
+    color: var(--clay);
+    font-style: italic;
+    font-weight: 400;
+  }
+  .feat-2 .sub {
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    font-style: italic;
+    color: var(--ink-mid);
+    line-height: 1.4;
+    margin-bottom: 40px;
+    max-width: 720px;
+    position: relative;
+    z-index: 2;
+  }
+  .feat-2 .footer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+  }
+  .feat-2 .brand {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    color: var(--navy);
+  }
+  .feat-2 .brand .m, .feat-2 .brand .dot { color: var(--clay); }
+  .feat-2 .url {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(26,23,20,0.45);
+    border-left: 1px solid rgba(26,23,20,0.15);
+    padding-left: 20px;
+  }
+
+  /* CARD 3: Self-assessment promo */
+  .feat-3 {
+    background: linear-gradient(135deg, var(--navy) 0%, #1A2E5A 100%);
+    color: var(--ivory);
+    padding: 80px 90px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .feat-3::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    left: -200px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,106,63,0.14), transparent 65%);
+  }
+  .feat-3 .badge {
+    display: inline-block;
+    background: rgba(201,106,63,0.18);
+    color: var(--clay);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border-radius: 4px;
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 2;
+    align-self: flex-start;
+  }
+  .feat-3 h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 88px;
+    font-weight: 400;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    margin-bottom: 28px;
+    max-width: 920px;
+    position: relative;
+    z-index: 2;
+  }
+  .feat-3 h1 em {
+    color: var(--clay);
+    font-style: italic;
+    font-weight: 400;
+  }
+  .feat-3 .sub {
+    font-family: 'Fraunces', serif;
+    font-size: 26px;
+    font-style: italic;
+    color: rgba(246,241,232,0.7);
+    line-height: 1.4;
+    margin-bottom: 36px;
+    max-width: 760px;
+    position: relative;
+    z-index: 2;
+  }
+  .feat-3 .meta {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+    z-index: 2;
+  }
+  .feat-3 .meta-item {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(246,241,232,0.7);
+  }
+  .feat-3 .dot-sep { color: var(--clay); }
+
+</style>
+</head>
+<body>
+
+<div class="instructions">
+  <strong>LinkedIn Featured / Share images — 1200 × 627 px.</strong><br>
+  Three card concepts you can use as Featured posts, page banners, or shared as graphics.
+  Screenshot each at 1:1 to use.
+</div>
+
+<div>
+  <div class="item-label">Card 1 — Brand Hero (Dark)</div>
+  <div class="feat feat-1">
+    <div class="eyebrow">Leadership &amp; Culture Consultancy</div>
+    <h1>Better leaders.<br>Healthier cultures.<br>Organisations that <em>can handle what's next.</em></h1>
+    <div class="sub">Partner-led, faculty-supported. UK, UAE, and across distributed organisations.</div>
+    <div class="footer">
+      <div class="brand">Success <span class="m">M</span>powered<span class="dot">.</span></div>
+      <div class="url">successmpowered.com</div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="item-label">Card 2 — Brand Hero (Light)</div>
+  <div class="feat feat-2">
+    <div class="eyebrow">Leadership &amp; Culture Consultancy</div>
+    <h1>Develop the human capacity to <em>lead what's next.</em></h1>
+    <div class="sub">Cohort programmes, executive coaching, and culture transformation, partner-led from day one.</div>
+    <div class="footer">
+      <div class="brand">Success <span class="m">M</span>powered<span class="dot">.</span></div>
+      <div class="url">successmpowered.com</div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="item-label">Card 3 — Assessment Promo</div>
+  <div class="feat feat-3">
+    <div class="badge">Free Self-Assessment</div>
+    <h1>Know where you stand. <em>Lead from there.</em></h1>
+    <div class="sub">Two short assessments. Ten honest questions each. A clearer picture of yourself, or of the culture you are building.</div>
+    <div class="meta">
+      <div class="meta-item">10 Questions</div>
+      <div class="dot-sep">·</div>
+      <div class="meta-item">2 Minutes</div>
+      <div class="dot-sep">·</div>
+      <div class="meta-item">successmpowered.com/assess</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
