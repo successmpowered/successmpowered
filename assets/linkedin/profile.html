@@ -11,6 +11,7 @@
     --navy: #0E1E3F;
     --clay: #C96A3F;
     --ivory: #F6F1E8;
+    --bone: #F9F6F2;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -32,17 +33,15 @@
     text-align: center;
   }
   .instructions strong { color: #fff; }
-
   .row { display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap; justify-content: center; }
   .item { display: flex; flex-direction: column; align-items: center; gap: 12px; }
   .item-label { font-size: 12px; color: #888; letter-spacing: 0.06em; text-transform: uppercase; }
 
-  /* Profile logo — square, navy bg, clean wordmark.
-     Built at 400x400 for LinkedIn (will display crisp at 300x300 too). */
+  /* Option A — Ivory wordmark (contrasts with navy banner) */
   .profile {
     width: 400px;
     height: 400px;
-    background: var(--navy);
+    background: var(--bone);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,7 +58,17 @@
     width: 280px;
     height: 280px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(201,106,63,0.16), transparent 70%);
+    background: radial-gradient(circle, rgba(201,106,63,0.18), transparent 70%);
+  }
+  .profile::after {
+    content: '';
+    position: absolute;
+    bottom: -120px;
+    left: -80px;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    border: 1px solid rgba(14,30,63,0.08);
   }
   .profile-inner {
     position: relative;
@@ -70,21 +79,21 @@
     font-family: 'Fraunces', serif;
     font-size: 52px;
     font-weight: 400;
-    color: var(--ivory);
+    color: var(--navy);
     letter-spacing: -0.02em;
     line-height: 1;
     margin-bottom: 6px;
   }
-  .profile .word .m { color: var(--clay); }
   .profile .word2 {
     font-family: 'Fraunces', serif;
     font-size: 52px;
     font-weight: 400;
-    color: var(--ivory);
+    color: var(--navy);
     letter-spacing: -0.02em;
     line-height: 1;
     margin-bottom: 18px;
   }
+  .profile .word2 .m { color: var(--clay); }
   .profile .word2 .dot { color: var(--clay); }
   .profile .underline {
     width: 60px;
@@ -98,10 +107,10 @@
     font-weight: 500;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: rgba(246,241,232,0.55);
+    color: rgba(14,30,63,0.55);
   }
 
-  /* Alternative: monogram version */
+  /* Option B — Navy monogram */
   .profile-alt {
     width: 400px;
     height: 400px;
@@ -145,19 +154,62 @@
     display: flex;
     align-items: baseline;
   }
-  .monogram .m {
-    color: var(--clay);
+  .monogram .m { color: var(--clay); }
+  .monogram .s { margin-right: -10px; }
+
+  /* Option C — Navy wordmark (matches banner tone) */
+  .profile-navy {
+    width: 400px;
+    height: 400px;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
   }
-  .monogram .s {
-    margin-right: -10px;
+  .profile-navy::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,106,63,0.16), transparent 70%);
+  }
+  .profile-navy .profile-inner { position: relative; z-index: 2; padding: 0 30px; }
+  .profile-navy .word, .profile-navy .word2 {
+    font-family: 'Fraunces', serif;
+    font-size: 52px;
+    font-weight: 400;
+    color: var(--ivory);
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .profile-navy .word { margin-bottom: 6px; }
+  .profile-navy .word2 { margin-bottom: 18px; }
+  .profile-navy .word2 .m { color: var(--clay); }
+  .profile-navy .word2 .dot { color: var(--clay); }
+  .profile-navy .underline { width: 60px; height: 2px; background: var(--clay); margin: 0 auto 14px; }
+  .profile-navy .sublabel {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(246,241,232,0.55);
   }
 </style>
 </head>
 <body>
 
 <div class="instructions">
-  <strong>LinkedIn Profile Logo — 400 × 400 px (LinkedIn min: 300 × 300, max: 400 × 400).</strong><br>
-  Two options below — screenshot whichever you prefer at 1:1 and upload as your company page logo.
+  <strong>LinkedIn Profile Logo — 400 × 400 px.</strong><br>
+  Profile logo overlays the bottom-left of your banner. An ivory background (Option A) gives the most contrast against the navy banner.<br>
+  Screenshot whichever you prefer at 1:1 and upload as your company page logo.
 </div>
 
 <div class="row">
@@ -170,14 +222,26 @@
         <div class="sublabel">Leadership · Culture</div>
       </div>
     </div>
-    <div class="item-label">Option A — Wordmark</div>
+    <div class="item-label">Option A — Ivory Wordmark (recommended)</div>
   </div>
 
   <div class="item">
     <div class="profile-alt">
       <div class="monogram"><span class="s">S</span><span class="m">M</span></div>
     </div>
-    <div class="item-label">Option B — Monogram</div>
+    <div class="item-label">Option B — Navy Monogram</div>
+  </div>
+
+  <div class="item">
+    <div class="profile-navy">
+      <div class="profile-inner">
+        <div class="word">Success</div>
+        <div class="word2"><span class="m">M</span>powered<span class="dot">.</span></div>
+        <div class="underline"></div>
+        <div class="sublabel">Leadership · Culture</div>
+      </div>
+    </div>
+    <div class="item-label">Option C — Navy Wordmark</div>
   </div>
 </div>
 
