@@ -1,0 +1,25 @@
+backend:
+  name: github
+  repo: successmpowered/successmpowered
+  branch: main
+  base_url: https://sveltia-cms-auth.pages.dev
+
+media_folder: assets/img/posts
+public_folder: /assets/img/posts
+
+collections:
+  - name: insights
+    label: Insights
+    label_singular: Insight
+    folder: _posts
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime, format: "YYYY-MM-DD" }
+      - { label: Author, name: author, widget: select, options: ["Christopher Greenwood", "Aditi Sahai"] }
+      - { label: Topic, name: topic, widget: select, options: ["Leadership", "Culture", "Self-awareness", "Coaching", "Modern work", "Case notes"] }
+      - { label: "Read time", name: readtime, widget: string, hint: "e.g. 8 min" }
+      - { label: Excerpt, name: excerpt, widget: text, hint: "2-3 sentence summary shown in the article grid" }
+      - { label: Body, name: body, widget: markdown }
+      - { label: Featured, name: featured, widget: boolean, default: false, hint: "Show as the featured article on the Insights page" }

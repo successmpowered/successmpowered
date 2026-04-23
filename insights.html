@@ -221,6 +221,32 @@
   </div>
 </footer>
 <script src="assets/js/site.js"></script>
+<script>
+(function() {
+  fetch('/posts.json')
+    .then(r => r.json())
+    .then(data => {
+      const grid = document.querySelector('.article-grid');
+      if (!grid || !data.posts || !data.posts.length) return;
+      const visuals = ['', 'v2', 'v3', 'v4', 'v5', 'v6'];
+      data.posts.forEach((post, i) => {
+        const v = visuals[i % visuals.length];
+        const card = document.createElement('a');
+        card.href = '/posts/' + post.slug + '.html';
+        card.className = 'article';
+        card.innerHTML = `
+          <div class="article-visual ${v}"></div>
+          <div class="article-body">
+            <span class="article-topic">${post.topic}</span>
+            <h3 class="article-title">${post.title}</h3>
+            <div class="article-meta">By ${post.author} · ${post.readtime}</div>
+          </div>`;
+        grid.prepend(card);
+      });
+    })
+    .catch(() => {});
+})();
+</script>
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 <script type="text/javascript">window.addEventListener('load', function() { if (typeof Calendly !== 'undefined') { Calendly.initBadgeWidget({ url: 'https://calendly.com/successmpowered/30min', text: 'Book a call', color: '#C96A3F', textColor: '#ffffff', branding: true }); } });</script>
 </body>
