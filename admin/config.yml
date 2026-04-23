@@ -2,7 +2,8 @@ backend:
   name: github
   repo: successmpowered/successmpowered
   branch: main
-  base_url: https://sveltia-cms-auth.pages.dev
+  auth_type: pkce
+  app_id: Ov23liG7FzDHCD4DQkDz
 
 media_folder: assets/img/posts
 public_folder: /assets/img/posts
