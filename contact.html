@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/site.css">
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <style>
   .contact-layout {
     display: grid;
@@ -177,6 +178,17 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container" style="max-width:860px;">
+    <div class="section-head" style="max-width:600px;">
+      <span class="eyebrow">Book directly</span>
+      <h2>Or pick a time that works for you.</h2>
+      <p class="lede">If you'd rather skip the form and just book a 30-minute call, choose a time below.</p>
+    </div>
+    <div class="calendly-inline-widget" data-url="https://calendly.com/successmpowered/30min" style="min-width:320px;height:700px;"></div>
+  </div>
+</section>
+
 <section class="section section-alt">
   <div class="container">
     <div class="section-head" style="max-width:600px;">
@@ -217,5 +229,7 @@
   </div>
 </footer>
 <script src="assets/js/site.js"></script>
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript">window.addEventListener('load', function() { if (typeof Calendly !== 'undefined') { Calendly.initBadgeWidget({ url: 'https://calendly.com/successmpowered/30min', text: 'Book a call', color: '#C96A3F', textColor: '#ffffff', branding: true }); } });</script>
 </body>
 </html>
