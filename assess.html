@@ -7,19 +7,19 @@
   <meta name="description" content="Two short assessments. Ten honest questions each. A clearer picture of yourself as a leader, or of the culture you are building.">
   <link rel="canonical" href="https://www.successmpowered.com/assess.html">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #F9F6F2; --card: #FFFFFF; --ink: #1A1714; --ink-mid: #5A5450; --ink-light: #9A9390;
+      --bg: #F9F6F2; --card: #FFFFFF; --ink: #1B1B1E; --ink-mid: #6B6E76; --ink-light: #9A9390;
       --accent: #C96A3F; --accent-bg: #FAF0EB; --accent-dark: #B15A30;
-      --sage: #5C7A56; --border: #E5DDD5; --radius: 16px; --radius-sm: 10px;
+      --sage: #5C7A56; --border: #E2E0DA; --radius: 8px; --radius-sm: 6px;
       --shadow: 0 4px 32px rgba(26,23,20,0.08); --shadow-sm: 0 2px 12px rgba(26,23,20,0.06);
       --navy: #0E1E3F;
     }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Jost', sans-serif; background: var(--bg); color: var(--ink); font-size:16px; line-height:1.6; }
-    h1,h2,h3 { font-family: 'Cormorant Garamond', Georgia, serif; line-height:1.2; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink); font-size:17px; line-height:1.65; }
+    h1,h2,h3 { font-family: 'Fraunces', Georgia, serif; line-height:1.15; font-weight:400; letter-spacing:-0.015em; }
 
     /* Site mini-header */
     .assess-header { background: #fff; border-bottom: 1px solid #E2E0DA; padding: 14px 32px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 200; }
@@ -35,23 +35,23 @@
     .tag { display:inline-flex; font-size:0.68rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); background:var(--accent-bg); border-radius:4px; padding:4px 10px; margin-bottom:18px; }
     .lbl { font-size:0.7rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-light); }
     hr.div { height:1px; background:var(--border); border:none; margin:28px 0; }
-    .btn { display:inline-block; border:none; cursor:pointer; font-family:'Jost',sans-serif; font-weight:500; font-size:0.875rem; letter-spacing:0.04em; border-radius:8px; transition:all 0.2s; text-decoration:none; text-align:center; }
-    .btn-p { background:var(--navy); color:#fff; padding:16px 32px; }
-    .btn-p:hover { background:#1a2e5a; }
-    .btn-a { background:var(--accent); color:#fff; padding:16px 32px; }
-    .btn-a:hover { background:var(--accent-dark); }
+    .btn { display:inline-block; border:none; cursor:pointer; font-family:'Inter',sans-serif; font-weight:600; font-size:14.5px; letter-spacing:0.01em; border-radius:4px; transition:all 0.2s; text-decoration:none; text-align:center; }
+    .btn-p { background:var(--accent); color:#fff; padding:14px 28px; }
+    .btn-p:hover { background:var(--accent-dark); transform:translateY(-1px); }
+    .btn-a { background:var(--navy); color:#fff; padding:14px 28px; }
+    .btn-a:hover { background:#1a2e5a; transform:translateY(-1px); }
     .btn-g { background:transparent; color:var(--ink-mid); padding:10px 18px; border:1.5px solid var(--border); }
     .btn-g:hover { border-color:var(--accent); color:var(--accent); }
     .btn-w { width:100%; display:block; }
-    .btn-cg { display:inline-block; background:transparent; color:#C8C2BC; padding:14px 28px; border-radius:8px; border:1.5px solid #4A4540; cursor:pointer; font-family:'Jost',sans-serif; font-size:0.875rem; text-decoration:none; transition:all 0.2s; }
+    .btn-cg { display:inline-block; background:transparent; color:#C8C2BC; padding:14px 28px; border-radius:4px; border:1.5px solid #4A4540; cursor:pointer; font-family:'Inter',sans-serif; font-size:14.5px; text-decoration:none; transition:all 0.2s; }
     .btn-cg:hover { border-color:#25D366; color:#25D366; }
-    input[type=text],input[type=email] { width:100%; padding:12px 16px; border-radius:var(--radius-sm); border:1.5px solid var(--border); font-family:'Jost',sans-serif; font-size:0.9rem; font-weight:300; color:var(--ink); background:#fff; outline:none; transition:border-color 0.15s; }
+    input[type=text],input[type=email] { width:100%; padding:12px 16px; border-radius:var(--radius-sm); border:1.5px solid var(--border); font-family:'Inter',sans-serif; font-size:0.9rem; font-weight:300; color:var(--ink); background:#fff; outline:none; transition:border-color 0.15s; }
     input[type=text]:focus,input[type=email]:focus { border-color:var(--accent); }
     input.err { border-color:#C17A5A !important; }
     .flbl { display:block; font-size:0.7rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-light); margin-bottom:6px; margin-top:16px; }
     .pb-bg { height:3px; background:var(--border); border-radius:99px; overflow:hidden; }
     .pb-fill { height:100%; background:var(--accent); border-radius:99px; transition:width 0.4s ease; }
-    .sopt { display:flex; align-items:center; gap:14px; padding:13px 18px; border-radius:var(--radius-sm); border:1.5px solid var(--border); background:transparent; cursor:pointer; text-align:left; width:100%; font-family:'Jost',sans-serif; transition:all 0.15s; margin-bottom:8px; }
+    .sopt { display:flex; align-items:center; gap:14px; padding:13px 18px; border-radius:var(--radius-sm); border:1.5px solid var(--border); background:transparent; cursor:pointer; text-align:left; width:100%; font-family:'Inter',sans-serif; transition:all 0.15s; margin-bottom:8px; }
     .sopt:hover,.sopt.sel { border-color:var(--accent); background:var(--accent-bg); }
     .sopt .radio { width:26px; height:26px; border-radius:50%; border:1.5px solid var(--border); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:all 0.15s; }
     .sopt.sel .radio { border-color:var(--accent); background:var(--accent); }
@@ -64,7 +64,7 @@
     .sinner { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; }
     .stats { display:flex; background:var(--accent-bg); border-radius:var(--radius-sm); padding:20px 24px; margin-bottom:32px; }
     .stat { flex:1; text-align:center; }
-    .stv { font-family:'Cormorant Garamond',serif; font-size:1.8rem; font-weight:600; color:var(--accent); }
+    .stv { font-family:'Fraunces',serif; font-size:1.8rem; font-weight:600; color:var(--accent); }
     .two { display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); margin-bottom:16px; }
     .cta-dk { background:var(--navy); color:#fff; border-radius:var(--radius); padding:48px; text-align:center; margin-bottom:20px; }
     @media(max-width:600px){ .cta-dk{padding:32px 24px;} }
@@ -72,7 +72,7 @@
     .cb { display:flex; gap:12px; align-items:flex-start; padding:16px; background:var(--bg); border-radius:var(--radius-sm); border:1.5px solid var(--border); margin:16px 0 20px; }
     input[type=checkbox] { width:16px; height:16px; margin-top:2px; flex-shrink:0; accent-color:var(--accent); cursor:pointer; }
     .qcards { display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
-    .qcard { padding:36px; border-radius:var(--radius); background:var(--card); border:1.5px solid var(--border); box-shadow:var(--shadow); cursor:pointer; text-align:left; transition:all 0.25s; font-family:'Jost',sans-serif; width:100%; }
+    .qcard { padding:36px; border-radius:var(--radius); background:var(--card); border:1.5px solid var(--border); box-shadow:var(--shadow); cursor:pointer; text-align:left; transition:all 0.25s; font-family:'Inter',sans-serif; width:100%; }
     .qcard:hover { border-color:var(--accent); box-shadow:0 8px 40px rgba(201,106,63,0.15); transform:translateY(-3px); background:var(--accent-bg); }
     .screen { display:none; }
     .screen.active { display:block; }
@@ -154,7 +154,7 @@
   </div>
   <div class="card" style="padding:40px 44px;">
     <div class="tag" id="q-theme"></div>
-    <h2 id="q-text" style="font-size:clamp(1.1rem,3vw,1.45rem);line-height:1.5;margin-bottom:32px;font-weight:600;"></h2>
+    <h2 id="q-text" style="font-size:clamp(1.1rem,3vw,1.45rem);line-height:1.4;margin-bottom:32px;font-weight:500;"></h2>
     <div id="q-opts"></div>
   </div>
 </div></div>
@@ -180,7 +180,7 @@
             style="transition:stroke-dashoffset 1.2s ease;"/>
         </svg>
         <div class="sinner">
-          <div id="t-score" style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:600;line-height:1;"></div>
+          <div id="t-score" style="font-family:'Fraunces',serif;font-size:2.4rem;font-weight:600;line-height:1;"></div>
           <div class="lbl" style="font-size:0.6rem;margin-top:2px;">out of 50</div>
         </div>
       </div>
@@ -191,7 +191,7 @@
     <p id="t-text" style="font-size:1rem;font-weight:300;color:var(--ink-mid);line-height:1.75;text-align:center;font-style:italic;"></p>
     <div class="unlock">
       <div style="font-size:1.3rem;margin-bottom:10px;">🔓</div>
-      <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;margin-bottom:10px;">Unlock Your Full Result</h3>
+      <h3 style="font-family:'Fraunces',serif;font-size:1.2rem;margin-bottom:10px;">Unlock Your Full Result</h3>
       <p style="font-size:0.875rem;font-weight:300;color:var(--ink-mid);line-height:1.65;margin-bottom:20px;">Enter a few details to receive your complete assessment, including key strengths, blind spots, and three practical next steps tailored to your result.</p>
       <button onclick="goCapture()" class="btn btn-a btn-w" style="padding:16px;">Unlock My Full Result →</button>
       <p class="priv" style="margin-top:10px;">No spam. Your details are used only to deliver your result.</p>
@@ -231,7 +231,7 @@
 <div class="wrap"><div class="si">
   <div class="card" id="r-hdr" style="text-align:center;margin-bottom:20px;padding:48px;">
     <div class="lbl" id="r-qlbl" style="display:block;margin-bottom:14px;"></div>
-    <div id="r-score" style="font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:600;margin-bottom:10px;"></div>
+    <div id="r-score" style="font-family:'Fraunces',serif;font-size:2.8rem;font-weight:600;margin-bottom:10px;"></div>
     <h1 id="r-bt" style="font-size:clamp(1.5rem,4vw,2.3rem);margin-bottom:6px;"></h1>
     <p id="r-bs" class="lbl" style="margin-bottom:24px;"></p>
     <div style="max-width:320px;margin:0 auto;">
@@ -245,16 +245,16 @@
   </div>
   <div class="two">
     <div class="card" style="border-top:3px solid var(--sage);padding:28px;">
-      <h3 style="font-size:1rem;font-family:'Cormorant Garamond',serif;color:var(--sage);margin-bottom:14px;">✓ Key Strengths</h3>
+      <h3 style="font-size:1rem;font-family:'Fraunces',serif;color:var(--sage);margin-bottom:14px;">✓ Key Strengths</h3>
       <ul id="r-str" style="list-style:none;"></ul>
     </div>
     <div class="card" style="border-top:3px solid var(--accent);padding:28px;">
-      <h3 style="font-size:1rem;font-family:'Cormorant Garamond',serif;color:var(--accent);margin-bottom:14px;">◎ Likely Blind Spots</h3>
+      <h3 style="font-size:1rem;font-family:'Fraunces',serif;color:var(--accent);margin-bottom:14px;">◎ Likely Blind Spots</h3>
       <ul id="r-bls" style="list-style:none;"></ul>
     </div>
   </div>
   <div class="card" style="margin-bottom:20px;">
-    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;margin-bottom:24px;">Three Practical Next Steps</h3>
+    <h3 style="font-family:'Fraunces',serif;font-size:1.3rem;margin-bottom:24px;">Three Practical Next Steps</h3>
     <div id="r-steps"></div>
   </div>
   <div class="cta-dk">
