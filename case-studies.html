@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Work | Success Mpowered</title>
+<meta name="description" content="Real leadership and culture engagements with IOHK, Regus Finland and Lokyata — measurable change, always partner-led.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Success Mpowered">
+<meta property="og:title" content="Client Work | Success Mpowered">
+<meta property="og:description" content="Real leadership and culture engagements. Measurable change. Always partner-led, never handed off.">
+<meta property="og:url" content="https://www.successmpowered.com/case-studies.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Client Work | Success Mpowered">
+<meta name="twitter:description" content="Real leadership and culture engagements. Measurable change. Always partner-led, never handed off.">
+<link rel="canonical" href="https://www.successmpowered.com/case-studies.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<style>
+/* Case studies page — scoped styles */
+.cs-hero {
+  background: var(--navy);
+  padding: 100px 0 70px;
+}
+.cs-hero-grid {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 4rem;
+  align-items: end;
+}
+.cs-hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 0;
+  color: #fff;
+  letter-spacing: -0.025em;
+}
+.cs-hero h1 em { font-style: italic; font-weight: 400; color: rgba(255,255,255,0.6); }
+.cs-hero-rule {
+  width: 36px; height: 2px;
+  background: var(--clay);
+  margin-bottom: 1.75rem;
+}
+.cs-hero-desc {
+  font-size: 1rem; font-weight: 400;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 1.5rem;
+}
+.cs-hero-aside {
+  font-family: 'Fraunces', serif;
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.28);
+  margin: 0;
+}
+
+/* Studies section */
+.cs-studies { padding: 80px 0; }
+
+.cs-study { margin-bottom: 80px; scroll-margin-top: 84px; }
+.cs-study:last-child { margin-bottom: 0; }
+
+.cs-study-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 2.5rem;
+}
+.cs-tags { display: flex; align-items: center; flex-wrap: wrap; gap: 0; }
+.cs-tag {
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--clay);
+}
+.cs-tag + .cs-tag::before {
+  content: '·';
+  margin: 0 0.6rem;
+  color: var(--line);
+}
+.cs-num {
+  font-family: 'Fraunces', serif;
+  font-size: 0.875rem; font-style: italic;
+  color: var(--muted); flex-shrink: 0;
+}
+
+/* Card: two-panel split */
+.cs-card {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--white);
+}
+
+/* Left visual panel */
+.cs-panel {
+  background: var(--navy);
+  padding: 3rem 2.75rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 480px;
+}
+.cs-panel::after {
+  content: '';
+  position: absolute;
+  bottom: -100px; right: -100px;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,106,63,0.16) 0%, transparent 65%);
+  pointer-events: none;
+}
+.cs-panel-client {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 500;
+  color: rgba(255,255,255,0.88);
+  line-height: 1;
+  position: relative; z-index: 1;
+}
+.cs-panel-stats {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column;
+  gap: 1.75rem;
+}
+.cs-stat-num {
+  display: block;
+  font-family: 'Fraunces', serif;
+  font-size: 2.75rem; font-weight: 500;
+  color: #fff; line-height: 1;
+}
+.cs-stat-desc {
+  display: block;
+  font-size: 12px; font-weight: 400;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.45);
+  margin-top: 0.25rem;
+}
+
+/* Right content panel */
+.cs-content {
+  padding: 3rem 3.25rem;
+  display: flex; flex-direction: column;
+  gap: 2rem;
+}
+.cs-content h2 {
+  font-size: clamp(1.625rem, 2.3vw, 2.125rem);
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+.cs-body {
+  font-size: 15px; font-weight: 400;
+  line-height: 1.85;
+  color: var(--muted);
+}
+.cs-body p + p { margin-top: 1em; }
+.cs-body p { max-width: none; }
+
+.cs-quote {
+  border-left: 2px solid var(--clay);
+  padding: 0.25rem 0 0.25rem 1.5rem;
+  margin: 0;
+}
+.cs-quote p {
+  font-family: 'Fraunces', serif;
+  font-size: 1.25rem; font-style: italic;
+  font-weight: 400; line-height: 1.5;
+  color: var(--navy); max-width: none;
+}
+.cs-quote cite {
+  display: block;
+  font-size: 13px; font-style: normal;
+  font-weight: 400; color: var(--muted);
+  margin-top: 0.7rem;
+}
+
+.cs-outcomes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+.cs-outcome {
+  background: var(--ivory);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 1.125rem 1.25rem;
+}
+.cs-outcome.full { grid-column: 1 / -1; }
+.cs-outcome-label {
+  display: block;
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--clay); margin-bottom: 0.4rem;
+}
+.cs-outcome p {
+  font-size: 14px; line-height: 1.65;
+  color: var(--slate); font-weight: 400;
+  max-width: none; margin: 0;
+}
+
+.cs-divider {
+  width: 100%; height: 1px;
+  background: var(--line);
+  margin: 80px 0;
+}
+
+/* Page CTA */
+.cs-cta {
+  background: var(--navy);
+  padding: 96px 0;
+  text-align: center;
+}
+.cs-cta h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15; color: #fff;
+  margin-bottom: 1.25rem;
+}
+.cs-cta h2 em { font-style: italic; font-weight: 400; color: rgba(255,255,255,0.4); }
+.cs-cta p {
+  font-size: 1rem; font-weight: 400;
+  line-height: 1.8; color: rgba(255,255,255,0.5);
+  margin-bottom: 2.5rem; max-width: 540px;
+  margin-left: auto; margin-right: auto;
+}
+
+@media (max-width: 960px) {
+  .cs-hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .cs-card { grid-template-columns: 1fr; }
+  .cs-panel { min-height: 220px; }
+  .cs-content { padding: 2.25rem 2rem; }
+  .cs-outcomes { grid-template-columns: 1fr; }
+  .cs-outcome.full { grid-column: 1; }
+}
+@media (max-width: 660px) {
+  .cs-hero { padding: 60px 0 40px; }
+  .cs-hero h1 { font-size: 2.25rem; }
+  .cs-content { padding: 2rem 1.5rem; }
+  .cs-studies { padding: 48px 0; }
+  .cs-divider { margin: 48px 0; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="logo">Success <span class="dot">M</span>powered<span class="dot">.</span></a>
+    <nav><ul class="nav-links">
+      <li><a href="leadership-development.html">Leadership</a></li>
+      <li><a href="culture-transformation.html">Culture</a></li>
+      <li><a href="executive-coaching.html">Coaching</a></li>
+      <li><a href="team-interventions.html">Interventions</a></li>
+      <li class="nav-divider" aria-hidden="true"></li>
+      <li><a href="approach.html">Approach</a></li>
+      <li><a href="case-studies.html" class="active">Client Work</a></li>
+      <li><a href="assess.html">Assess</a></li>
+      <li><a href="contact.html" class="btn">Talk to us <span class="arrow">→</span></a></li>
+    </ul></nav>
+    <button class="nav-burger" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  </div>
+</header>
+
+<section class="cs-hero">
+  <div class="container">
+    <div class="cs-hero-grid">
+      <div>
+        <span class="eyebrow">Client work</span>
+        <h1>Real engagements.<br><em>Measurable change.</em></h1>
+      </div>
+      <div>
+        <div class="cs-hero-rule"></div>
+        <p class="cs-hero-desc">Each engagement is different: the organisation, the challenge, the people. The goal is always the same. To leave leaders, teams and cultures in a meaningfully better place than we found them.</p>
+        <p class="cs-hero-aside">Always partner-led. Never handed off.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-studies">
+  <div class="container">
+
+    <!-- 01: IOHK -->
+    <div class="cs-study" id="iohk">
+      <div class="cs-study-header">
+        <div class="cs-tags">
+          <span class="cs-tag">Resilience Programme</span>
+          <span class="cs-tag">Global Technology</span>
+          <span class="cs-tag">Distributed Teams</span>
+        </div>
+        <span class="cs-num">01 of 03</span>
+      </div>
+      <div class="cs-card">
+        <div class="cs-panel">
+          <span class="cs-panel-client">IOHK</span>
+          <div class="cs-panel-stats">
+            <div>
+              <span class="cs-stat-num">100%</span>
+              <span class="cs-stat-desc">wanted the programme to continue</span>
+            </div>
+            <div>
+              <span class="cs-stat-num">85%</span>
+              <span class="cs-stat-desc">reported increased self-awareness</span>
+            </div>
+            <div>
+              <span class="cs-stat-num">100%</span>
+              <span class="cs-stat-desc">improved focus and concentration</span>
+            </div>
+          </div>
+        </div>
+        <div class="cs-content">
+          <h2>Building personal resilience inside a high-pressure, globally distributed technology company.</h2>
+          <div class="cs-body">
+            <p>IOHK is the global blockchain company behind the ADA cryptocurrency. Its teams worked remotely across time zones, under intense public pressure to deliver, with long hours and frequent organisational change. Leadership recognised what this was doing to people's physical, emotional and mental health. Slowing down was not an option, so they wanted to give their teams real support within the pace.</p>
+            <p>We began with the leadership team, agreeing what they wanted to achieve: practical ways to reduce stress, a shared positive experience for a remote global team, and a deeper understanding of where people's anxiety and frustration were coming from. We then held one-to-one conversations with team members to understand their individual challenges and expectations before designing anything.</p>
+            <p>The result was Boost Your Personal Resilience: one ninety-minute online session a week, timed to work across the team's time zones. Each session combined breathwork to reduce stress and sharpen focus, a short yoga sequence designed for office life, self-guided meditation, and awareness sessions that worked directly on the challenges people had raised.</p>
+          </div>
+          <blockquote class="cs-quote">
+            <p>"Honestly, I enjoyed the camaraderie and shared wellness exercises with my colleagues. I think it sends a really important message to each other that we value these types of exercises, modes of awareness and balance. And that we're not just saying we do."</p>
+            <cite>Programme participant, IOHK</cite>
+          </blockquote>
+          <blockquote class="cs-quote">
+            <p>"I am making progress week after week. I can imagine how this will help me be more productive and control my anxiety better in the long run, making the way we work more sustainable."</p>
+            <cite>Programme participant, IOHK</cite>
+          </blockquote>
+          <div class="cs-outcomes">
+            <div class="cs-outcome">
+              <span class="cs-outcome-label">Participation</span>
+              <p><strong>100%</strong> of participants enjoyed the programme and wanted it to continue.</p>
+            </div>
+            <div class="cs-outcome">
+              <span class="cs-outcome-label">Wellbeing</span>
+              <p><strong>100%</strong> said the tools and insights helped them manage their mental wellbeing.</p>
+            </div>
+            <div class="cs-outcome">
+              <span class="cs-outcome-label">Focus and concentration</span>
+              <p><strong>100%</strong> reported a positive effect on their ability to focus.</p>
+            </div>
+            <div class="cs-outcome">
+              <span class="cs-outcome-label">Self-awareness</span>
+              <p><strong>85%</strong> said the programme increased their self-awareness and understanding.</p>
+            </div>
+            <div class="cs-outcome full">
+              <span class="cs-outcome-label">Energy</span>
+              <p><strong>80%</strong> said the tools, techniques and meditations rejuvenated them.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-divider"></div>
+
+    <!-- 02: REGUS -->
+    <div class="cs-study" id="regus">
+      <div class="cs-study-header">
+        <div class="cs-tags">
+          <span class="cs-tag">Motivation Workshop</span>
+          <span class="cs-tag">Managed Workspace</span>
+          <span class="cs-tag">Nordic Market</span>
+        </div>
+        <span class="cs-num">02 of 03</span>
+      </div>
+      <div class="cs-card">
+        <div class="cs-panel">
+          <span class="cs-panel-client">Regus Finland</span>
+          <div class="cs-panel-stats">
+            <div>
+              <span class="cs-stat-num">100+</span>
+              <span class="cs-stat-desc">companies inside the Regus Finland network</span>
+            </div>
+            <div>
+              <span class="cs-stat-num">Every day</span>
+              <span class="cs-stat-desc">participants see the session's key takeaways, posted at reception</span>
+            </div>
+          </div>
+        </div>
+        <div class="cs-content">
+          <h2>Helping the people inside a global co-working network face down the Nordic winter.</h2>
+          <div class="cs-body">
+            <p>Regus Finland provides co-working and managed office space to more than 100 companies, and looks for ways to add value for the businesses in its buildings. Finnish winters are hard. The lack of sunlight is known to affect energy, motivation and mental health, and the whole working community feels it.</p>
+            <p>As the dark season approached, Regus asked us for a workshop that would help people sustain their motivation through it: something that lifted mood as well as productivity, and suited their brand and their customers.</p>
+            <p>We created Beat the Autumn Blues. It built on our signature motivation programme, which works from the inside out, and brought in guidance from nutritionists alongside research on the effects of low sunlight, reviewed by our experts. Participants left with practical tools and practices for keeping motivation up when the season works against it.</p>
+            <p>The session landed with the people who attended live and with those who watched the recording afterwards. Participants wrote down the three traps to avoid and three motivators from the session and posted them at reception, where they see them every day.</p>
+          </div>
+          <blockquote class="cs-quote">
+            <p>"At a time when the nights are dark and winters long the Power Skill Workshop on Motivation was extremely inspirational. We really enjoyed the program. It's been great working with Success Mpowered."</p>
+            <cite>Regus Finland</cite>
+          </blockquote>
+          <div class="cs-outcomes">
+            <div class="cs-outcome full">
+              <span class="cs-outcome-label">Outcome</span>
+              <p>Participants described the session as interesting and useful, with practical tips they could use in everyday life. Its key points went up at reception, where participants see them every day: a small detail that says something about what the work left behind.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-divider"></div>
+
+    <!-- 03: LOKYATA -->
+    <div class="cs-study" id="lokyata">
+      <div class="cs-study-header">
+        <div class="cs-tags">
+          <span class="cs-tag">Leadership Development</span>
+          <span class="cs-tag">Psychological Safety</span>
+          <span class="cs-tag">Fintech, Washington DC</span>
+        </div>
+        <span class="cs-num">03 of 03</span>
+      </div>
+      <div class="cs-card">
+        <div class="cs-panel">
+          <span class="cs-panel-client">Lokyata</span>
+          <div class="cs-panel-stats">
+            <div>
+              <span class="cs-stat-num">All</span>
+              <span class="cs-stat-desc">participants would recommend the programme</span>
+            </div>
+            <div>
+              <span class="cs-stat-num">C-suite</span>
+              <span class="cs-stat-desc">piloted it first, before the wider team</span>
+            </div>
+            <div>
+              <span class="cs-stat-num">Majority</span>
+              <span class="cs-stat-desc">rated the programme excellent or good</span>
+            </div>
+          </div>
+        </div>
+        <div class="cs-content">
+          <h2>Building psychological safety in a remote fintech team.</h2>
+          <div class="cs-body">
+            <p>Lokyata is a Washington DC fintech whose data-driven tools help lenders automate their workflows and process more loans. After the pandemic, with everyone working remotely, keeping people motivated and connected had become harder. Work had narrowed to individual tasks on individual screens, in a business that depends on constant innovation and collaboration.</p>
+            <p>Lokyata wanted a programme that would protect its people-first ethos. Management was sceptical at first, so we piloted the programme with the CEO, COO, CTO and Head of Operations. Only once they were convinced did we take it to the rest of the company.</p>
+            <p>One-to-one conversations with team members shaped what came next. People wanted better ways to make decisions and look after their mental health, tools for handling the frustrations of day-to-day work, stronger connection with colleagues, and clearer communication. The programme worked on self-motivation, letting emotions pass before making decisions, an inner sense of purpose, and locus of control, supported by exercises and worksheets between sessions and examples drawn from their own working world.</p>
+            <p>Participants described becoming less conflict-driven in disagreements, more careful to give others space to speak, and more responsive rather than reactive. Some of the more junior team members said little in the sessions at first. In the one-to-ones afterwards, they turned out to be the ones completing the most exercises and putting the learning into practice week after week.</p>
+          </div>
+          <blockquote class="cs-quote">
+            <p>"It was extremely helpful for me as it helped me look at myself, become more aware of myself and my own emotions and understand what others might be going through. These topics helped my staff to be able to talk freely, avoid fear and talk about things with no fear of others judging them."</p>
+            <cite>Santosh, CEO, Lokyata</cite>
+          </blockquote>
+          <blockquote class="cs-quote">
+            <p>"I used to fall into conflicts in and outside of work. Now I am more positive. Giving compliments to teammates is creating better relationships."</p>
+            <cite>Team member, Lokyata</cite>
+          </blockquote>
+          <div class="cs-outcomes">
+            <div class="cs-outcome">
+              <span class="cs-outcome-label">Recommendation</span>
+              <p>All participants said they would recommend the programme.</p>
+            </div>
+            <div class="cs-outcome">
+              <span class="cs-outcome-label">Rating</span>
+              <p>A majority rated the programme excellent or good.</p>
+            </div>
+            <div class="cs-outcome">
+              <span class="cs-outcome-label">Everyday life</span>
+              <p>A majority found it extremely or very useful for everyday life.</p>
+            </div>
+            <div class="cs-outcome">
+              <span class="cs-outcome-label">Mental wellbeing</span>
+              <p>A majority said it positively contributed to their mental wellbeing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cs-cta">
+  <div class="container" style="text-align:center;">
+    <h2>Every engagement<br><em>starts with a conversation.</em></h2>
+    <p>If you are facing a leadership challenge or a culture question, or you are simply not sure where to begin, we are glad to have an honest conversation about it.</p>
+    <a href="contact.html" class="btn">Start a conversation <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><h3>Success Mpowered</h3><p>A leadership and culture consultancy helping organisations develop the human capacity they need to lead what's next.</p></div>
+      <div><h4>What we do</h4><ul><li><a href="leadership-development.html">Leadership Development</a></li><li><a href="culture-transformation.html">Culture Transformation</a></li><li><a href="executive-coaching.html">Executive Coaching</a></li><li><a href="team-interventions.html">Team Interventions</a></li></ul></div>
+      <div><h4>About</h4><ul><li><a href="about.html">Our Story</a></li><li><a href="team.html">Team &amp; Associates</a></li><li><a href="approach.html">Our Approach</a></li></ul></div>
+      <div><h4>Client work</h4><ul><li><a href="case-studies.html">Case Studies</a></li><li><a href="#">Client Outcomes</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="contact.html">Start a conversation</a></li><li><a href="mailto:team@successempowered.com">team@successempowered.com</a></li><li><a href="https://wa.me/447709532849?text=Hi%2C%20I%20came%20across%20Success%20Mpowered%20and%20would%20like%20to%20find%20out%20more%20about%20working%20together." target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="13" height="13" fill="#25D366" style="vertical-align:-1px;margin-right:5px;flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp us →</a></li></ul></div>
+    </div>
+    <div class="footer-accred"><div class="footer-legal"><span>© Success Mpowered 2026</span><a href="privacy.html">Privacy</a><a href="#">Terms</a></div></div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript">window.addEventListener('load', function() { if (typeof Calendly !== 'undefined') { Calendly.initBadgeWidget({ url: 'https://calendly.com/successmpowered/30min', text: 'Book a call', color: '#C96A3F', textColor: '#ffffff', branding: true }); } });</script>
+</body>
+</html>
